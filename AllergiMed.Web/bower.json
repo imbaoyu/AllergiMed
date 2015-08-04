@@ -1,0 +1,25 @@
+{
+  "name": "AllergiMed.Web",
+  "version": "0.0.0",
+  "authors": [
+    "Yu Bao <imbaoyu@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-loading-bar": "~0.8.0",
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  },
+  "resolutions": {
+    "font-awesome": "~4.3"
+  }
+}

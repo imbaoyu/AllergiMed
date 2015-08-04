@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllergiMed.Api", "AllergiMed.Api\AllergiMed.Api.csproj", "{652077EB-B03A-42A9-AFB5-3CA408424538}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{A089CFD3-5B70-47E1-9795-F7E0B230CB8D}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{494E2E29-0E08-4942-AED0-6CBB36064EE3}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\AllergiMedApi-WAWS-dev.json = PublishScripts\Configurations\AllergiMedApi-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllergiMed.Web", "AllergiMed.Web\AllergiMed.Web.csproj", "{DFA29B2A-B9D6-40F5-AA16-E8BD7E909C43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{652077EB-B03A-42A9-AFB5-3CA408424538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{652077EB-B03A-42A9-AFB5-3CA408424538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{652077EB-B03A-42A9-AFB5-3CA408424538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{652077EB-B03A-42A9-AFB5-3CA408424538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA29B2A-B9D6-40F5-AA16-E8BD7E909C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA29B2A-B9D6-40F5-AA16-E8BD7E909C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA29B2A-B9D6-40F5-AA16-E8BD7E909C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA29B2A-B9D6-40F5-AA16-E8BD7E909C43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{494E2E29-0E08-4942-AED0-6CBB36064EE3} = {A089CFD3-5B70-47E1-9795-F7E0B230CB8D}
+	EndGlobalSection
+EndGlobal

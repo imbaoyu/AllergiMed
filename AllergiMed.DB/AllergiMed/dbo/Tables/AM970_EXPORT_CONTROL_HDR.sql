@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[AM970_EXPORT_CONTROL_HDR] (
+    [SEQ_CTR]                  INT         IDENTITY (1, 1) NOT NULL,
+    [TS]                       ROWVERSION  NOT NULL,
+    [FK_AM300_SEQ_CTR]         INT         NULL,
+    [FK_AM400_SEQ_CTR]         INT         NULL,
+    [FK_AM970A1_SEQ_CTR]       INT         NULL,
+    [EXPORT_TYPE]              NCHAR (5)   NULL,
+    [EXPORT_DATE]              DATE        NULL,
+    [EXPORT_DESC]              NCHAR (255) NULL,
+    [EXPORT_VALIDATION_STATUS] NCHAR (64)  NULL,
+    [EXPORT_COMPLETION_STATUS] NCHAR (64)  NULL,
+    CONSTRAINT [PK_AM970_EXPORT_CONTROL_HDR] PRIMARY KEY CLUSTERED ([SEQ_CTR] ASC)
+);
+

@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER=SQL Server Native Client 11.0
+UID=AllergiMed
+DATABASE=AM-BOSS
+WSID=FTL-YUB-LAPTOP
+APP=Microsoft Office 2013
+SERVER=rqlx20yx78.database.windows.net
+Description=azure access for local access

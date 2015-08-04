@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[AM950A_THERAPY_PLAN_DETAIL] (
+    [SEQ_CTR]                   INT              IDENTITY (1, 1) NOT NULL,
+    [ID]                        UNIQUEIDENTIFIER NULL,
+    [TS]                        ROWVERSION       NULL,
+    [FK_AM950_SEQ_CTR]          INT              CONSTRAINT [DF_Table_1_THERAPY_PLAN_NAME] DEFAULT ((4)) NOT NULL,
+    [QTY]                       DECIMAL (18, 2)  CONSTRAINT [DF_AM950A_THERAPY_PLAN_DETAIL_QTY] DEFAULT ((1)) NULL,
+    [ITEM_ID]                   NCHAR (64)       NOT NULL,
+    [ITEM_DESC]                 NCHAR (128)      NULL,
+    [UNIT_PRICE]                DECIMAL (18, 2)  CONSTRAINT [DF_AM950A_THERAPY_PLAN_DETAIL_UNIT_PRICE] DEFAULT ((0)) NULL,
+    [PATIENT_DIRECT_UNIT_PRICE] MONEY            NULL,
+    CONSTRAINT [PK_AM950A_THERAPY_PLAN_DETAIL] PRIMARY KEY CLUSTERED ([SEQ_CTR] ASC)
+);
+

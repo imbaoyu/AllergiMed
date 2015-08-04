@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[SIMAIN] (
+    [SEQ_CTR]       INT              IDENTITY (1, 1) NOT NULL,
+    [ID]            UNIQUEIDENTIFIER CONSTRAINT [DF_SIMAIN_ID] DEFAULT (newid()) NULL,
+    [TS]            ROWVERSION       NULL,
+    [PDF_READ_PATH] NCHAR (64)       NULL,
+    [PDF_TEMP_PATH] NCHAR (64)       NULL,
+    CONSTRAINT [PK_SIMAIN] PRIMARY KEY CLUSTERED ([SEQ_CTR] ASC)
+);
+

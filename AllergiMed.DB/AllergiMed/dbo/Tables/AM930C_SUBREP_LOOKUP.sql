@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[AM930C_SUBREP_LOOKUP] (
+    [SEQ_CTR]        INT              IDENTITY (1, 1) NOT NULL,
+    [ID]             UNIQUEIDENTIFIER NULL,
+    [TS]             ROWVERSION       NULL,
+    [SUBREP_ID]      NCHAR (32)       NULL,
+    [SUBREP_FULL_ID] NCHAR (132)      NULL,
+    [FK_DIST_ID]     NCHAR (32)       NULL,
+    [FK_REP_ID]      NCHAR (32)       NULL,
+    [SUBREP_NAME]    NCHAR (32)       NULL,
+    CONSTRAINT [PK_AM930C_SUBREP_LOOKUP] PRIMARY KEY CLUSTERED ([SEQ_CTR] ASC)
+);
+

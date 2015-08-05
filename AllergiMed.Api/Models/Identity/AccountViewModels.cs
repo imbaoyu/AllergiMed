@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace AllergiMed.Api.Models
+namespace AllergiMed.Api.Models.Identity
 {
     // Models returned by AccountController actions.
 

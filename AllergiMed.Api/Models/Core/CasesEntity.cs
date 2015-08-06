@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AllergiMed.Api.Models.Core
 {
-    //AM100_CASES
-    public partial class CasesEntity
+    [Table("AM100_CASES")]
+    public class CasesEntity
     {
         [Key]
         public int SEQ_CTR { get; set; }

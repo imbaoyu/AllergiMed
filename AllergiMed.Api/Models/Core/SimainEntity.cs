@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AllergiMed.Api.Models.Core
 {
-    //SIMAIN
     [Table("SIMAIN")]
-    public partial class SimainEntity
+    public class SimainEntity
     {
         [Key]
         public int SEQ_CTR { get; set; }

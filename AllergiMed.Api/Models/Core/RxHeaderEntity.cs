@@ -1,13 +1,11 @@
-namespace AllergiMed.Api.Models.Case
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-    //AM200_RX_HEADER
-    public partial class RxHeaderEntity
+namespace AllergiMed.Api.Models.Core
+{
+    [Table("AM200_RX_HEADER")]
+    public class RxHeaderEntity
     {
         [Key]
         public int SEQ_CTR { get; set; }

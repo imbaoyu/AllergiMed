@@ -1,11 +1,9 @@
-namespace AllergiMed.Api.Models.Case
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
+namespace AllergiMed.Api.Models.Lookup
+{
+    //AM970B_EXPORT_COMPLETION_STATUS_LOOKUP
     public partial class AM970B_EXPORT_COMPLETION_STATUS_LOOKUP
     {
         [Key]

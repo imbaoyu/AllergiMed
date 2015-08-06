@@ -217,50 +217,47 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Core\AM100_CASES_BAK_050315.cs">
+    <Compile Include="Models\Core\CasesBakEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM400_SO_HEADER.cs">
+    <Compile Include="Models\Core\SoHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM410_SO_DETAIL.cs">
+    <Compile Include="Models\Core\SoDetailEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM900_EXTRACT_FILE.cs">
+    <Compile Include="Models\Core\ExtractFileEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM920A_ITEM_TYPE.cs">
+    <Compile Include="Models\Core\ItemTypeEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM950A_THERAPY_PLAN_DETAIL.cs">
+    <Compile Include="Models\Core\TherapyPlanDetailEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM950_THERAPY_PLAN_HEADER.cs">
+    <Compile Include="Models\Core\TherapyPlanHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM970A1_SO_EXPORT_EXPORT_CONTROL_HEADER.cs">
+    <Compile Include="Models\Core\SoExportControlHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM970A_SO_EXPORT_BUFFER.cs">
+    <Compile Include="Models\Core\SoExportBufferEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM970B_EXPORT_COMPLETION_STATUS_LOOKUP.cs">
+    <Compile Include="Models\Core\ExportControlHdrEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AM970_EXPORT_CONTROL_HDR.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Models\Core\AUTO_REFILL.cs">
+    <Compile Include="Models\Core\AutoRefillEntity.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Core\CasesEntity.cs" />
-    <Compile Include="Models\Core\MedRecord.cs">
+    <Compile Include="Models\Core\MedRecordContext.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Core\RxDetailEntity.cs" />
     <Compile Include="Models\Core\RxHeaderEntity.cs" />
     <Compile Include="Models\Core\RxRenewSchedEntity.cs" />
-    <Compile Include="Models\Core\RX_HDR.cs">
+    <Compile Include="Models\Core\RxHdrEntity.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Core\SimainEntity.cs" />
@@ -281,6 +278,7 @@
     <Compile Include="Models\Lookup\AM940_PHYSICIAN_LOOKUP.cs" />
     <Compile Include="Models\Lookup\AM960_MONTH_LOOKUP.cs" />
     <Compile Include="Models\Lookup\AM965_STATE_LOOKUP.cs" />
+    <Compile Include="Models\Lookup\AM970B_EXPORT_COMPLETION_STATUS_LOOKUP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

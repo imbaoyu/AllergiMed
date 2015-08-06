@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AllergiMed.Api.Models.Core
 {
-    //AM300_SO_BATCH_HEADER
-    public partial class SoBatchHeaderEntity
+    [Table("AM300_SO_BATCH_HEADER")]
+    public class SoBatchHeaderEntity
     {
         [Key]
         public int SEQ_CTR { get; set; }

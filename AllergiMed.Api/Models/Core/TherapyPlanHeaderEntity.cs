@@ -1,12 +1,11 @@
-namespace AllergiMed.Api.Models.Case
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-    public partial class AM950_THERAPY_PLAN_HEADER
+namespace AllergiMed.Api.Models.Core
+{
+    [Table("AM950_THERAPY_PLAN_HEADER")]
+    public class TherapyPlanHeaderEntity
     {
         [Key]
         public int SEQ_CTR { get; set; }

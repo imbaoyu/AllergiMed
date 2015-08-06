@@ -1,12 +1,11 @@
-namespace AllergiMed.Api.Models.Case
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-    public partial class RX_HDR
+namespace AllergiMed.Api.Models.Core
+{
+    [Table("RX_HDR")]
+    public class RxHdrEntity
     {
         [Key]
         public int RXInfoID { get; set; }

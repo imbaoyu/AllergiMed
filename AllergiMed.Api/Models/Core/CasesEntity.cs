@@ -8,320 +8,415 @@ namespace AllergiMed.Api.Models.Core
     public class CasesEntity
     {
         [Key]
-        public int SEQ_CTR { get; set; }
+        [Column("SEQ_CTR")]
+        public int SeqCtr { get; set; }
 
         [Required]
         [StringLength(64)]
-        public string CASE_ID { get; set; }
+        [Column("CASE_ID")]
+        public string CaseId { get; set; }
 
-        public Guid? ID { get; set; }
+        [Column("ID")]
+        public Guid? Id { get; set; }
 
-        [Column(TypeName = "timestamp")]
+        [Column("TS", TypeName = "timestamp")]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [MaxLength(8)]
-        public byte[] TS { get; set; }
+        public byte[] TimeStamp { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? INTAKE_DATE { get; set; }
+        [Column("INTAKE_DATE", TypeName = "date")]
+        public DateTime? IntakeDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? EDIT_DATE { get; set; }
+        [Column("EDIT_DATE", TypeName = "date")]
+        public DateTime? EditDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? LAST_TEST_DATE { get; set; }
+        [Column("LAST_TEST_DATE", TypeName = "date")]
+        public DateTime? LastTestDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? NEXT_TEST_DATE { get; set; }
+        [Column("NEXT_TEST_DATE", TypeName = "date")]
+        public DateTime? NextTestDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? FIRST_VISIT_DATE { get; set; }
+        [Column("FIRST_VISIT_DATE", TypeName = "date")]
+        public DateTime? FirstVisitDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? SECOND_VISIT_DATE { get; set; }
+        [Column("SECOND_VISIT_DATE", TypeName = "date")]
+        public DateTime? SecondVisitDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? THIRD_VISIT_DATE { get; set; }
+        [Column("THIRD_VISIT_DATE", TypeName = "date")]
+        public DateTime? ThirdVisitDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? FOURTH_VISIT_DATE { get; set; }
+        [Column("FOURTH_VISIT_DATE", TypeName = "date")]
+        public DateTime? FourthVisitDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? RETEST_DATE { get; set; }
+        [Column("RETEST_DATE", TypeName = "date")]
+        public DateTime? RetestDate { get; set; }
 
         [StringLength(20)]
-        public string TESTKIT_LOT_NUMBER { get; set; }
+        [Column("TESTKIT_LOT_NUMBER")]
+        public string TestkitLotNumber { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? TESTKIT_LOT_DATE { get; set; }
+        [Column("TESTKIT_LOT_DATE", TypeName = "date")]
+        public DateTime? TestkitLotDate { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? FAX_RECD_DATE { get; set; }
-
-        [StringLength(32)]
-        public string DIST_ID { get; set; }
+        [Column("FAX_RECD_DATE", TypeName = "date")]
+        public DateTime? FaxRecdDate { get; set; }
 
         [StringLength(32)]
-        public string SUBDIST_ID { get; set; }
+        [Column("DIST_ID")]
+        public string DistId { get; set; }
 
         [StringLength(32)]
-        public string REP_ID { get; set; }
+        [Column("SUBDIST_ID")]
+        public string SubdistId { get; set; }
 
         [StringLength(32)]
-        public string SUBREP_ID { get; set; }
+        [Column("REP_ID")]
+        public string RepId { get; set; }
 
         [StringLength(32)]
-        public string PROVIDER_ID { get; set; }
+        [Column("SUBREP_ID")]
+        public string SubrepId { get; set; }
+
+        [StringLength(32)]
+        [Column("PROVIDER_ID")]
+        public string ProviderId { get; set; }
 
         [StringLength(1)]
-        public string PATIENT_DIRECT_FLAG { get; set; }
+        [Column("PATIENT_DIRECT_FLAG")]
+        public string PatientDirectFlag { get; set; }
 
         [StringLength(255)]
-        public string BILLTO_ACCTG_ID { get; set; }
+        [Column("BILLTO_ACCTG_ID")]
+        public string BilltoAcctgId { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ACCTG_NAME { get; set; }
+        [Column("BILLTO_ACCTG_NAME")]
+        public string BilltoAcctgName { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ADD1 { get; set; }
+        [Column("BILLTO_ADD1")]
+        public string BilltoAdd1 { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ADD2 { get; set; }
+        [Column("BILLTO_ADD2")]
+        public string BilltoAdd2 { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ADD3 { get; set; }
+        [Column("BILLTO_ADD3")]
+        public string BilltoAdd3 { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ADD4 { get; set; }
+        [Column("BILLTO_ADD4")]
+        public string BilltoAdd4 { get; set; }
 
         [StringLength(64)]
-        public string BILLTO_ADD5 { get; set; }
+        [Column("BILLTO_ADD5")]
+        public string BilltoAdd5 { get; set; }
 
         [StringLength(255)]
-        public string SHIPTO_ACCTG_ID { get; set; }
+        [Column("SHIPTO_ACCTG_ID")]
+        public string ShiptoAcctgId { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ACCTG_NAME { get; set; }
+        [Column("SHIPTO_ACCTG_NAME")]
+        public string ShiptoAcctgName { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ADD1 { get; set; }
+        [Column("SHIPTO_ADD1")]
+        public string ShiptoAdd1 { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ADD2 { get; set; }
+        [Column("SHIPTO_ADD2")]
+        public string ShiptoAdd2 { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ADD3 { get; set; }
+        [Column("SHIPTO_ADD3")]
+        public string ShiptoAdd3 { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ADD4 { get; set; }
+        [Column("SHIPTO_ADD4")]
+        public string ShiptoAdd4 { get; set; }
 
         [StringLength(64)]
-        public string SHIPTO_ADD5 { get; set; }
+        [Column("SHIPTO_ADD5")]
+        public string ShiptoAdd5 { get; set; }
 
         [StringLength(32)]
-        public string SHIPTO_CITY { get; set; }
+        [Column("SHIPTO_CITY")]
+        public string ShiptoCity { get; set; }
 
         [StringLength(8)]
-        public string SHIPTO_STATE { get; set; }
+        [Column("SHIPTO_STATE")]
+        public string ShiptoState { get; set; }
 
         [StringLength(12)]
-        public string SHIPTO_POSTAL { get; set; }
+        [Column("SHIPTO_POSTAL")]
+        public string ShiptoPostal { get; set; }
 
         [StringLength(128)]
-        public string RESULTS_IMAGE_PATH { get; set; }
+        [Column("RESULTS_IMAGE_PATH")]
+        public string ResultsImagePath { get; set; }
 
         [StringLength(32)]
-        public string RESULTS_IMAGE_FILE { get; set; }
+        [Column("RESULTS_IMAGE_FILE")]
+        public string ResultsImageFile { get; set; }
 
         [StringLength(1)]
-        public string CONSENT_OK { get; set; }
+        [Column("CONSENT_OK")]
+        public string ConsentOk { get; set; }
 
         [StringLength(1)]
-        public string RX_OK { get; set; }
+        [Column("RX_OK")]
+        public string RxOk { get; set; }
 
         [StringLength(1)]
-        public string RESULTS_OK { get; set; }
+        [Column("RESULTS_OK")]
+        public string ResultsOk { get; set; }
 
         [StringLength(1)]
-        public string FINAL_OK { get; set; }
+        [Column("FINAL_OK")]
+        public string FinalOk { get; set; }
 
         [StringLength(32)]
+        [Column("PatientLastName")]
         public string PatientLastName { get; set; }
 
         [StringLength(32)]
+        [Column("PatientFirstName")]
         public string PatientFirstName { get; set; }
 
         [StringLength(1)]
-        public string PatientMI { get; set; }
+        [Column("PatientMI")]
+        public string PatientMi { get; set; }
 
         [StringLength(70)]
-        public string PATIENT_NAME { get; set; }
+        [Column("PATIENT_NAME")]
+        public string PatientName { get; set; }
 
         [StringLength(50)]
+        [Column("PatientAddressLine1")]
         public string PatientAddressLine1 { get; set; }
 
         [StringLength(50)]
+        [Column("PatientAddressLine2")]
         public string PatientAddressLine2 { get; set; }
 
         [StringLength(25)]
+        [Column("PatientCity")]
         public string PatientCity { get; set; }
 
         [StringLength(10)]
+        [Column("PatientState")]
         public string PatientState { get; set; }
 
         [StringLength(12)]
+        [Column("PatientZipCode")]
         public string PatientZipCode { get; set; }
 
         [StringLength(50)]
+        [Column("PatientCountry")]
         public string PatientCountry { get; set; }
 
         [StringLength(25)]
+        [Column("PatientBillingAddress")]
         public string PatientBillingAddress { get; set; }
 
         [StringLength(25)]
+        [Column("PatientBillingCity")]
         public string PatientBillingCity { get; set; }
 
         [StringLength(10)]
+        [Column("PatientBillingState")]
         public string PatientBillingState { get; set; }
 
         [StringLength(10)]
+        [Column("PatientBillingZipCode")]
         public string PatientBillingZipCode { get; set; }
 
         [StringLength(14)]
+        [Column("PatientHomePhone")]
         public string PatientHomePhone { get; set; }
 
         [StringLength(14)]
+        [Column("PatientWorkPhone")]
         public string PatientWorkPhone { get; set; }
 
         [StringLength(14)]
+        [Column("PatientFax")]
         public string PatientFax { get; set; }
 
         [StringLength(64)]
+        [Column("PatientEmail")]
         public string PatientEmail { get; set; }
 
         [StringLength(1)]
+        [Column("Gender")]
         public string Gender { get; set; }
 
+        [Column("Birthdate")]
         public DateTime? Birthdate { get; set; }
 
         [StringLength(10)]
+        [Column("AccountNumber")]
         public string AccountNumber { get; set; }
 
         [StringLength(10)]
+        [Column("MedicalRecordNum")]
         public string MedicalRecordNum { get; set; }
 
-        [Column(TypeName = "ntext")]
+        [Column("Notes", TypeName = "ntext")]
         public string Notes { get; set; }
 
+        [Column("ChargeAccount")]
         public bool? ChargeAccount { get; set; }
 
         [StringLength(32)]
-        public string PatInsID { get; set; }
+        [Column("PatInsID")]
+        public string PatInsId { get; set; }
 
         [StringLength(25)]
-        public string SSN { get; set; }
+        [Column("SSN")]
+        public string Ssn { get; set; }
 
         [StringLength(1)]
+        [Column("Spanish")]
         public string Spanish { get; set; }
 
-        public bool? HIPPA { get; set; }
+        [Column("HIPPA")]
+        public bool? Hippa { get; set; }
 
-        public DateTime? HIPPADATE { get; set; }
+        [Column("HIPPA")]
+        public DateTime? HippaDate { get; set; }
 
+        [Column("AutoCharge")]
         public bool? AutoCharge { get; set; }
 
-        public int? FacilityID { get; set; }
+        [Column("FacilityID")]
+        public int? FacilityId { get; set; }
 
         [StringLength(25)]
-        public string CCNumber { get; set; }
+        [Column("CCNumber")]
+        public string CcNumber { get; set; }
 
         [StringLength(2)]
-        public string CCExpMonth { get; set; }
+        [Column("CCExpMonth")]
+        public string CcExpMonth { get; set; }
 
         [StringLength(2)]
-        public string CCExpYear { get; set; }
+        [Column("CCExpYear")]
+        public string CcExpYear { get; set; }
 
         [StringLength(41)]
-        public string CCName { get; set; }
+        [Column("CCName")]
+        public string CcName { get; set; }
 
         [StringLength(41)]
-        public string CCAddress { get; set; }
+        [Column("CCAddress")]
+        public string CcAddress { get; set; }
 
         [StringLength(41)]
-        public string CCZip { get; set; }
+        [Column("CCZip")]
+        public string CcZip { get; set; }
 
         [StringLength(1)]
-        public string CCAddressSame { get; set; }
+        [Column("CCAddressSame")]
+        public string CcAddressSame { get; set; }
 
+        [Column("DateChanged")]
         public DateTime? DateChanged { get; set; }
 
+        [Column("DateUploaded")]
         public DateTime? DateUploaded { get; set; }
 
+        [Column("BeginBalance")]
         public double? BeginBalance { get; set; }
 
         [StringLength(50)]
+        [Column("Password")]
         public string Password { get; set; }
 
-        public int? HIPPASignatureID { get; set; }
+        [Column("HIPPASignatureID")]
+        public int? HippaSignatureId { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField1")]
         public string CustomField1 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField2")]
         public string CustomField2 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField3")]
         public string CustomField3 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField4")]
         public string CustomField4 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField5")]
         public string CustomField5 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField6")]
         public string CustomField6 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField7")]
         public string CustomField7 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField8")]
         public string CustomField8 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField9")]
         public string CustomField9 { get; set; }
 
         [StringLength(100)]
+        [Column("CustomField10")]
         public string CustomField10 { get; set; }
 
         [StringLength(2)]
-        public string IDQualifier { get; set; }
+        [Column("IDQualifier")]
+        public string IdQualifier { get; set; }
 
         [StringLength(10)]
-        public string LastRXDate { get; set; }
+        [Column("LastRXDate")]
+        public string LastRxDate { get; set; }
 
+        [Column("CycleFill")]
         public bool? CycleFill { get; set; }
 
+        [Column("CycleFillInterval")]
         public int? CycleFillInterval { get; set; }
 
-        public int? RXDuration { get; set; }
+        [Column("RXDuration")]
+        public int? RxDuration { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? RXExpDate { get; set; }
+        [Column("RXExpDate", TypeName = "date")]
+        public DateTime? RxExpDate { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column("FirstCycleShipDate", TypeName = "date")]
         public DateTime? FirstCycleShipDate { get; set; }
 
+        [Column("FirstCycleOrder")]
         public int? FirstCycleOrder { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column("EndCycleShipDate", TypeName = "date")]
         public DateTime? EndCycleShipDate { get; set; }
 
+        [Column("LastCycleShipDate")]
         public DateTime? LastCycleShipDate { get; set; }
 
+        [Column("LastCycleOrder")]
         public int? LastCycleOrder { get; set; }
 
+        [Column("NextCycleShipDate")]
         public DateTime? NextCycleShipDate { get; set; }
 
+        [Column("NextCycleOrder")]
         public int? NextCycleOrder { get; set; }
     }
 }

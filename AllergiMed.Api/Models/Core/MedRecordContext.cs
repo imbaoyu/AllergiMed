@@ -49,84 +49,84 @@ namespace AllergiMed.Api.Models.Core
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CASE_ID)
+                .Property(e => e.CaseId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.TS)
+                .Property(e => e.TimeStamp)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.TESTKIT_LOT_NUMBER)
+                .Property(e => e.TestkitLotNumber)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.DIST_ID)
+                .Property(e => e.DistId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SUBDIST_ID)
+                .Property(e => e.SubdistId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.REP_ID)
+                .Property(e => e.RepId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SUBREP_ID)
+                .Property(e => e.SubrepId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.PROVIDER_ID)
+                .Property(e => e.ProviderId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.PATIENT_DIRECT_FLAG)
+                .Property(e => e.PatientDirectFlag)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.BILLTO_ACCTG_ID)
+                .Property(e => e.BilltoAcctgId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SHIPTO_ACCTG_ID)
+                .Property(e => e.ShiptoAcctgId)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SHIPTO_CITY)
+                .Property(e => e.ShiptoCity)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SHIPTO_STATE)
+                .Property(e => e.ShiptoState)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.SHIPTO_POSTAL)
+                .Property(e => e.ShiptoPostal)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.RESULTS_IMAGE_FILE)
+                .Property(e => e.ResultsImageFile)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CONSENT_OK)
+                .Property(e => e.ConsentOk)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.RX_OK)
+                .Property(e => e.RxOk)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.RESULTS_OK)
+                .Property(e => e.ResultsOk)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.FINAL_OK)
+                .Property(e => e.FinalOk)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.PATIENT_NAME)
+                .Property(e => e.PatientName)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesEntity>()
@@ -147,31 +147,31 @@ namespace AllergiMed.Api.Models.Core
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCNumber)
+                .Property(e => e.CcNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCExpMonth)
+                .Property(e => e.CcExpMonth)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCExpYear)
+                .Property(e => e.CcExpYear)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCName)
+                .Property(e => e.CcName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCAddress)
+                .Property(e => e.CcAddress)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCZip)
+                .Property(e => e.CcZip)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.CCAddressSame)
+                .Property(e => e.CcAddressSame)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -220,11 +220,11 @@ namespace AllergiMed.Api.Models.Core
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.IDQualifier)
+                .Property(e => e.IdQualifier)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CasesEntity>()
-                .Property(e => e.LastRXDate)
+                .Property(e => e.LastRxDate)
                 .IsFixedLength();
 
             modelBuilder.Entity<CasesBakEntity>()

@@ -1,3 +1,4 @@
+using AllergiMed.Api.DataAccess.Core;
 using AllergiMed.Api.Models.Lookup;
 
 namespace AllergiMed.Api.Models.Core

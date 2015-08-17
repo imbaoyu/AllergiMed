@@ -217,68 +217,68 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Core\CasesBakEntity.cs">
+    <Compile Include="DataAccess\Core\CasesBakEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\SoHeaderEntity.cs">
+    <Compile Include="DataAccess\Core\SoHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\SoDetailEntity.cs">
+    <Compile Include="DataAccess\Core\SoDetailEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\ExtractFileEntity.cs">
+    <Compile Include="DataAccess\Core\ExtractFileEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\ItemTypeEntity.cs">
+    <Compile Include="DataAccess\Core\ItemTypeEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\TherapyPlanDetailEntity.cs">
+    <Compile Include="DataAccess\Core\TherapyPlanDetailEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\TherapyPlanHeaderEntity.cs">
+    <Compile Include="DataAccess\Core\TherapyPlanHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\SoExportControlHeaderEntity.cs">
+    <Compile Include="DataAccess\Core\SoExportControlHeaderEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\SoExportBufferEntity.cs">
+    <Compile Include="DataAccess\Core\SoExportBufferEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\ExportControlHdrEntity.cs">
+    <Compile Include="DataAccess\Core\ExportControlHdrEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\AutoRefillEntity.cs">
+    <Compile Include="DataAccess\Core\AutoRefillEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\CasesEntity.cs" />
-    <Compile Include="Models\Core\MedRecordContext.cs">
+    <Compile Include="DataAccess\Core\CasesEntity.cs" />
+    <Compile Include="DataAccess\Core\MedRecordContext.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\RxDetailEntity.cs" />
-    <Compile Include="Models\Core\RxHeaderEntity.cs" />
-    <Compile Include="Models\Core\RxRenewSchedEntity.cs" />
-    <Compile Include="Models\Core\RxHdrEntity.cs">
+    <Compile Include="DataAccess\Core\RxDetailEntity.cs" />
+    <Compile Include="DataAccess\Core\RxHeaderEntity.cs" />
+    <Compile Include="DataAccess\Core\RxRenewSchedEntity.cs" />
+    <Compile Include="DataAccess\Core\RxHdrEntity.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\Core\SimainEntity.cs" />
-    <Compile Include="Models\Core\SoBatchHeaderEntity.cs" />
+    <Compile Include="DataAccess\Core\SimainEntity.cs" />
+    <Compile Include="DataAccess\Core\SoBatchHeaderEntity.cs" />
     <Compile Include="Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Models\Identity\AccountViewModels.cs" />
     <Compile Include="Models\Identity\IdentityModels.cs" />
-    <Compile Include="Models\Lookup\AM900_PROVIDER_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM900_PROVIDER_LOOKUP_BUFFER.cs" />
-    <Compile Include="Models\Lookup\AM910_BILLTO_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM915A_ROOT_NAME_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM915_SHIPTO_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM920_ITEM_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM930A_SUBDIST_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM930B_REP_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM930C_SUBREP_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM930_DIST_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM940_PHYSICIAN_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM960_MONTH_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM965_STATE_LOOKUP.cs" />
-    <Compile Include="Models\Lookup\AM970B_EXPORT_COMPLETION_STATUS_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM900_PROVIDER_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM900_PROVIDER_LOOKUP_BUFFER.cs" />
+    <Compile Include="DataAccess\Lookup\AM910_BILLTO_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM915A_ROOT_NAME_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM915_SHIPTO_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM920_ITEM_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM930A_SUBDIST_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM930B_REP_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM930C_SUBREP_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM930_DIST_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM940_PHYSICIAN_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM960_MONTH_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM965_STATE_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\AM970B_EXPORT_COMPLETION_STATUS_LOOKUP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

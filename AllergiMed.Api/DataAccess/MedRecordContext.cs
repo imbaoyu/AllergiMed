@@ -1,10 +1,10 @@
+using System.Data.Entity;
 using AllergiMed.Api.DataAccess.Core;
+using AllergiMed.Api.Models.Core;
 using AllergiMed.Api.Models.Lookup;
 
-namespace AllergiMed.Api.Models.Core
+namespace AllergiMed.Api.DataAccess
 {
-    using System.Data.Entity;
-
     public class MedRecordContext : DbContext
     {
         public MedRecordContext()

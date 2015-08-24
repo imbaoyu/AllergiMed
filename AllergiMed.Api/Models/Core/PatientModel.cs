@@ -3,7 +3,7 @@
 namespace AllergiMed.Api.Models.Core
 {
     //case
-    public class Patient
+    public class PatientModel
     {
         public string PatientLastName { get; set; }
         public string PatientFirstName { get; set; }

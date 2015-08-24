@@ -213,6 +213,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -251,7 +252,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAccess\Core\CasesEntity.cs" />
-    <Compile Include="DataAccess\Core\MedRecordContext.cs">
+    <Compile Include="DataAccess\MedRecordContext.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAccess\Core\RxDetailEntity.cs" />
@@ -262,6 +263,8 @@
     </Compile>
     <Compile Include="DataAccess\Core\SimainEntity.cs" />
     <Compile Include="DataAccess\Core\SoBatchHeaderEntity.cs" />
+    <Compile Include="Models\Core\PatientModel.cs" />
+    <Compile Include="Models\Core\PractitionerModel.cs" />
     <Compile Include="Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Models\Identity\AccountViewModels.cs" />
     <Compile Include="Models\Identity\IdentityModels.cs" />

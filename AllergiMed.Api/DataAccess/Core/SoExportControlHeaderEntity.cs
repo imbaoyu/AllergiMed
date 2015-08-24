@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AllergiMed.Api.Models.Core
+namespace AllergiMed.Api.DataAccess.Core
 {
     [Table("AM970A1_SO_EXPORT_EXPORT_CONTROL_HEADER")]
     public class SoExportControlHeaderEntity

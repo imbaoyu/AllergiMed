@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AllergiMed.Api.Models.Core
 {
-    public class Practitioner
+    public class PractitionerModel
     {
     }
 }

@@ -1,0 +1,129 @@
+﻿<div class="row">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Full Name</th>
+                    <th>Addres Line 1</th>
+                    <th>Addres Line 2</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip Code</th>
+                    <th>Country</th>
+                    <th>Billing Address</th>
+                    <th>Billing City</th>
+                    <th>Billing State</th>
+                    <th>Billing Zip Code</th>
+                    <th>Home Phone</th>
+                    <th>Work Phone</th>
+                    <th>Fax</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birth Date</th>
+                    <th>Account Number</th>
+                    <th>Medical Record Number</th>
+                    <th>Notes</th>
+                    <th>Charge Account?</th>
+                    <th>PatInsId</th>
+                    <th>Ssn</th>
+                    <th>Spanish</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="patient in patients">
+                    <td>
+                        {{ patient.PatientLastName }}
+                    </td>
+                    <td>
+                        {{ patient.PatientFirstName }}
+                    </td>
+                    <td>
+                        {{ patient.PatientMi }}
+                    </td>
+                    <td>
+                        {{ patient.PatientName }}
+                    </td>
+                    <td>
+                        {{ patient.PatientAddressLine1 }}
+                    </td>
+                    <td>
+                        {{ patient.PatientAddressLine2 }}
+                    </td>
+                    <td>
+                        {{ patient.PatientCity }}
+                    </td>
+                    <td>
+                        {{ patient.PatientState }}
+                    </td>
+                    <td>
+                        {{ patient.PatientZipCode }}
+                    </td>
+                    <td>
+                        {{ patient.PatientCountry }}
+                    </td>
+                    <td>
+                        {{ patient.PatientBillingAddress }}
+                    </td>
+                    <td>
+                        {{ patient.PatientBillingCity }}
+                    </td>
+                    <td>
+                        {{ patient.PatientBillingState }}
+                    </td>
+                    <td>
+                        {{ patient.PatientBillingZipCode }}
+                    </td>
+                    <td>
+                        {{ patient.PatientHomePhone }}
+                    </td>
+                    <td>
+                        {{ patient.PatientWorkPhone }}
+                    </td>
+                    <td>
+                        {{ patient.PatientFax }}
+                    </td>
+                    <td>
+                        {{ patient.PatientEmail }}
+                    </td>
+                    <td>
+                        {{ patient.Gender }}
+                    </td>
+                    <td>
+                        {{ patient.Birthdate }}
+                    </td>
+                    <td>
+                        {{ patient.AccountNumber }}
+                    </td>
+                    <td>
+                        {{ patient.MedicalRecordNum }}
+                    </td>
+                    <td>
+                        {{ patient.Notes }}
+                    </td>
+                    <td>
+                        <input type="checkbox" data-ng-model="patient.ChargeAccount" disabled="disabled">
+                    </td>
+                    <td>
+                        {{ patient.PatInsId }}
+                    </td>
+                    <td>
+                        {{ patient.Ssn }}
+                    </td>
+                    <td>
+                        {{ patient.Spanish }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>

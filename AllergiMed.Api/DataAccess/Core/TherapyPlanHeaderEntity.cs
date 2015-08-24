@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AllergiMed.Api.Models.Core
+namespace AllergiMed.Api.DataAccess.Core
 {
     [Table("AM950_THERAPY_PLAN_HEADER")]
     public class TherapyPlanHeaderEntity

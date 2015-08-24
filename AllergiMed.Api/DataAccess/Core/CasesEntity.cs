@@ -285,7 +285,7 @@ namespace AllergiMed.Api.DataAccess.Core
         [Column("HIPPA")]
         public bool? Hippa { get; set; }
 
-        [Column("HIPPA")]
+        [Column("HIPPADATE")]
         public DateTime? HippaDate { get; set; }
 
         [Column("AutoCharge")]

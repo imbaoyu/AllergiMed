@@ -60,6 +60,10 @@
     <Content Include="app\controllers\patientsController.js" />
     <Content Include="app\services\patientsService.js" />
     <Content Include="app\views\patients.html" />
+    <Content Include="proto\managecase.css" />
+    <Content Include="proto\managecase.html" />
+    <Content Include="proto\login.html" />
+    <Content Include="proto\signin.css" />
     <Content Include="bower_components\angular-loading-bar\.bower.json" />
     <Content Include="bower_components\angular-loading-bar\bower.json" />
     <Content Include="bower_components\angular-loading-bar\CHANGELOG.md" />
@@ -397,6 +401,9 @@
     <Content Include="bower_components\underscore\underscore.js" />
     <Content Include="content\css\site.css" />
     <Content Include="index.html" />
+    <Content Include="proto\wizard.css" />
+    <Content Include="proto\wizard.html" />
+    <Content Include="proto\wizard.js" />
     <Content Include="scripts\authComplete.js" />
     <Content Include="Web.config" />
   </ItemGroup>

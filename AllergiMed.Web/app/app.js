@@ -1,6 +1,12 @@
 ﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
 
 app.config(function ($routeProvider) {
+    //prototype pages
+    //$routeProvider.when("/proto/login", {
+    //    controller: "protoLoginController",
+    //    templateUrl: "/app/views/proto/login.html"
+    //});
+
 
     $routeProvider.when("/home", {
         controller: "homeController",

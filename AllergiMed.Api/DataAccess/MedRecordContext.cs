@@ -32,7 +32,7 @@ namespace AllergiMed.Api.DataAccess
         public virtual DbSet<SimainEntity> SimainEntity { get; set; }
 
         //lookup tables
-        public virtual DbSet<AM900_PROVIDER_LOOKUP> AM900_PROVIDER_LOOKUP { get; set; }
+        public virtual DbSet<ProviderEntity> ProviderEntity { get; set; }
         public virtual DbSet<AM900_PROVIDER_LOOKUP_BUFFER> AM900_PROVIDER_LOOKUP_BUFFER { get; set; }
         public virtual DbSet<AM910_BILLTO_LOOKUP> AM910_BILLTO_LOOKUP { get; set; }
         public virtual DbSet<AM915_SHIPTO_LOOKUP> AM915_SHIPTO_LOOKUP { get; set; }
@@ -779,176 +779,176 @@ namespace AllergiMed.Api.DataAccess
                 .Property(e => e.NEW_SHIPTO_ACCTG_ID)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.DIST_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.DistId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.SUBDIST_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.SubdistId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.REP_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.RepId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.SUBREP_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.SubrepId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.PHYSICIAN_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.PhysicianId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.PROVIDER_FULL_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ProviderFullId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.PROVIDER0_FNAME)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ProviderFirstName)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.PROVIDER0_LNAME)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ProviderLastName)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.Provider0StateLic)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ProviderStateLic)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.Provider0NPI)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ProviderNpi)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.BILLTO_ACCTG_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.BilltoAcctgId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
-                .Property(e => e.SHIPTO_ACCTG_ID)
+            modelBuilder.Entity<ProviderEntity>()
+                .Property(e => e.ShiptoAcctgId)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PROVIDER1_FNAME)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PROVIDER1_LNAME)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider1StateLic)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider1NPI)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PROVIDER2_FNAME)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PROVIDER2_LNAME)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider2Email)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider2DEA)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider2StateLic)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.Provider2NPI)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PrimaryContactName)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PrimaryContactTitle)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PrimaryContactEmail)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.SpecialInsts)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff1Name)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff1Title)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff1Lic)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff2Name)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff2Title)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.OtherStaff2Lic)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PrescriberLocationCode)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.StateIssued)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.TIME_STAMP)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.ORDER_CONF_TEMPLATE)
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.DIST_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.SUBDIST_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.REP_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.BILLTO_ACCTG_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.SHIPTO_ACCTG_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.PROVIDER_FULL_ID1)
                 .IsFixedLength();
 
-            modelBuilder.Entity<AM900_PROVIDER_LOOKUP>()
+            modelBuilder.Entity<ProviderEntity>()
                 .Property(e => e.BILLTO_ACCTG_NAME1)
                 .IsFixedLength();
 

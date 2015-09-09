@@ -268,7 +268,7 @@
     <Compile Include="Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Models\Identity\AccountViewModels.cs" />
     <Compile Include="Models\Identity\IdentityModels.cs" />
-    <Compile Include="DataAccess\Lookup\AM900_PROVIDER_LOOKUP.cs" />
+    <Compile Include="DataAccess\Lookup\ProviderEntity.cs" />
     <Compile Include="DataAccess\Lookup\AM900_PROVIDER_LOOKUP_BUFFER.cs" />
     <Compile Include="DataAccess\Lookup\AM910_BILLTO_LOOKUP.cs" />
     <Compile Include="DataAccess\Lookup\AM915A_ROOT_NAME_LOOKUP.cs" />

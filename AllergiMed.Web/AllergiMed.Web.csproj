@@ -57,12 +57,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\dashboardController.js" />
     <Content Include="app\controllers\patientsController.js" />
+    <Content Include="app\controllers\sidebarController.js" />
     <Content Include="app\services\patientsService.js" />
+    <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\patients.html" />
+    <Content Include="app\views\proto.html" />
+    <Content Include="proto\admincase.html" />
     <Content Include="proto\managecase.css" />
     <Content Include="proto\managecase.html" />
     <Content Include="proto\login.html" />
+    <Content Include="proto\manageuser.html" />
+    <Content Include="proto\practitioner.html" />
     <Content Include="proto\signin.css" />
     <Content Include="bower_components\angular-loading-bar\.bower.json" />
     <Content Include="bower_components\angular-loading-bar\bower.json" />

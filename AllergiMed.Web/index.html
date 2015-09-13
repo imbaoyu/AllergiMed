@@ -2,53 +2,47 @@
 <html data-ng-app="AllergiMedApp">
 <head>
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
-    <title>AngularJS Authentication</title>
+    <title>AllergiMed</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="bower_components/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
     <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </button>
-                <a class="navbar-brand" href="#/">Home</a>
+                <a class="navbar-brand" href="#">Home</a>
             </div>
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
+            <div id="navbar" class="navbar-collapse collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/patients">My Records</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
+                    <li><a href="" data-ng-click="logOut()">Logout</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#/Profile">Profile</a></li>
+                    <li><a href="#/Help">Help</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="jumbotron">
-        <div class="container">
-            <div class="page-header text-center">
-                <h1>AllergiMed Web Portal</h1>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar" data-ng-controller="sidebarController">
+                <ul class="nav nav-sidebar">
+                    <li ng-repeat="item in menuItems" ng-click="select($index)" ng-class="{active: $index == selected}">
+                        <a ng-href="{{item.route}}">{{item.name}}</a>
+                    </li>
+                </ul>
             </div>
-            <p>This single page application is built using AngularJS, it is using OAuth bearer token authentication, ASP.NET Web API 2, OWIN middleware, and ASP.NET Identity to generate tokens and register users.</p>
-        </div>
-    </div>
-    <div class="container">
-        <div data-ng-view="">
-        </div>
-    </div>
-    <hr />
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-muted">Created by Yu Bao</p>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div data-ng-view="">
                 </div>
             </div>
-        </div>
+         </div>
     </div>
     <!-- 3rd party libraries -->
     <script src="bower_components/angular/angular.js"></script>
@@ -63,6 +57,7 @@
     <script src="app/services/patientsService.js"></script>
     <!-- Load controllers -->
     <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/sidebarController.js"></script>
     <script src="app/controllers/homeController.js"></script>
     <script src="app/controllers/loginController.js"></script>
     <script src="app/controllers/signupController.js"></script>

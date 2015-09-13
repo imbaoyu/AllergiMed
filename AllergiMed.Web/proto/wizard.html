@@ -83,11 +83,11 @@
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                                <p>Test Result</p>
+                                <p>Test Preparation</p>
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-                                <p>Therapy</p>
+                                <p>Test Result</p>
                             </div>
                             <div class="stepwizard-step">
                                 <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
@@ -246,130 +246,51 @@
                                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
                             </div>
                         </div>
-                </div>
 
-                <div class="row setup-content" id="step-3">
-                    <div class="col-xs-8">
-                        <div class="col-md-12">
-                            <h3> Step 3 - Test Report </h3>
-                            <div class="row">
-                                <div class="col-xs-6 col-lg-4 result-panel">
-                                    <h2>PANEL A: GRASS</h2>
-                                    <div class="result-panel-row">
-                                        <div class="result-panel-header">Site</div>
-                                        <div class="result-panel-header">Allergen or Extract</div>
-                                        <div class="result-panel-header">(mm)</div>
+                        <div class="row setup-content" id="step-3">
+                            <div class="col-xs-8">
+                                <div class="col-md-12">
+                                    <h3> Step 3 - Test Preparation</h3>
+                                    <div class="form-group">
+                                        <label class="control-label">Test Date</label><br>
+                                        <input type="date" name="TestDate">
                                     </div>
-                                    <div class="result-panel-row">
-                                        <div class="result-panel-cell">A1</div>
-                                        <div name="positiveControl" class="result-panel-cell">
-                                            POSITIVE CONTROL
-                                        </div>
-                                        <div class="result-panel-cell">&nbsp;</div>
+                                    <div class="form-group">
+                                        <label class="control-label">Testing Location</label><br>
+                                        <input type="radio" name="Location" value="back">Back
+                                        <input type="radio" name="Location" value="arms">Arms
+                                        <input type="radio" name="Location" value="other">Other
                                     </div>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL B: WEEDS 1</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL C: WEEDS 2</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL D: TREES 1</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL E: TREES 2</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL F: TREES 3</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL G: EPIDERMAL/INSECT</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL H: MOLDS</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h2>PANEL I: FOODS</h2>
-                                        <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                                        <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                                        <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                                        <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                                        <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                                        <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                                        <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                                        <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                                    </div><!--/.col-xs-6.col-lg-4-->
-                                </div><!--/row-->
+                                    <div class="form-group">
+                                        <label class="control-label">Antihistamine</label><br>
+                                        <input type="radio" name="Antihistamine" value="yes">Yes
+                                        <input type="radio" name="Antihistamine" value="no">No
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Asthma</label><br>
+                                        <input type="radio" name="Asthma" value="yes">Yes
+                                        <input type="radio" name="Asthma" value="no">No
+                                    </div>                 
+                                    <div class="form-group">
+                                        <label class="control-label">Sperometry Requested</label><br>
+                                        <input type="radio" name="SperometryRequested" value="yes">Yes
+                                        <input type="radio" name="SperometryRequested" value="no">No
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Sperometry Performed</label><br>
+                                        <input type="radio" name="SperometryPerformed" value="yes">Yes
+                                        <input type="radio" name="SperometryPerformed" value="no">No
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Skin Testing Consent Signed</label><br>
+                                        <input type="radio" name="SkinTestConsentSigned" value="yes">Yes
+                                        <input type="radio" name="SkinTestConsentSigned" value="no">No
+                                    </div>
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                                </div>
                             </div>
-                            <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
                         </div>
-                    </div>
                     </form>
-                </div>
             </div>
         </div>
     </div>

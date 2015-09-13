@@ -1,16 +1,13 @@
-﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
+﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'mgo-angular-wizard']);
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/Dashboard", {
-        controller: "dashboardController",
         templateUrl: "/app/views/dashboard.html"
     });
 
     $routeProvider.when("/Wizard", {
-        controller: "wizardController",
         templateUrl: "/app/views/wizard.html"
     });
-
 
     $routeProvider.when("/home", {
         controller: "homeController",

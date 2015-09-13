@@ -60,10 +60,26 @@
     <Content Include="app\controllers\dashboardController.js" />
     <Content Include="app\controllers\patientsController.js" />
     <Content Include="app\controllers\sidebarController.js" />
+    <Content Include="app\controllers\wizardController.js" />
     <Content Include="app\services\patientsService.js" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\patients.html" />
     <Content Include="app\views\proto.html" />
+    <Content Include="app\views\wizard.html" />
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.css" />
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.js" />
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.min.css" />
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.min.js" />
+    <Content Include="bower_components\angular-wizard\Gruntfile.js" />
+    <Content Include="bower_components\angular-wizard\karma.conf.js" />
+    <Content Include="bower_components\angular-wizard\src\angularModule.js" />
+    <Content Include="bower_components\angular-wizard\src\step.html" />
+    <Content Include="bower_components\angular-wizard\src\step.js" />
+    <Content Include="bower_components\angular-wizard\src\wizard.html" />
+    <Content Include="bower_components\angular-wizard\src\wizard.js" />
+    <Content Include="bower_components\angular-wizard\src\wizardButtons.js" />
+    <Content Include="bower_components\angular-wizard\src\wizardHandler.js" />
+    <Content Include="bower_components\angular-wizard\test\angularWizardSpec.js" />
     <Content Include="proto\admincase.html" />
     <Content Include="proto\managecase.css" />
     <Content Include="proto\managecase.html" />
@@ -419,6 +435,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\angular-wizard\.bower.json" />
+    <Content Include="bower_components\angular-wizard\.gitignore" />
+    <Content Include="bower_components\angular-wizard\.travis.yml" />
+    <Content Include="bower_components\angular-wizard\bower.json" />
+    <Content Include="bower_components\angular-wizard\CHANGELOG.md" />
+    <Content Include="bower_components\angular-wizard\CONTRIBUTE.md" />
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.less" />
+    <Content Include="bower_components\angular-wizard\license.md" />
+    <Content Include="bower_components\angular-wizard\package.json" />
+    <Content Include="bower_components\angular-wizard\README.md" />
+    <Content Include="bower_components\angular-wizard\src\angular-wizard.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

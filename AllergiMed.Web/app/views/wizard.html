@@ -1,19 +1,278 @@
-﻿<div>
-    This is your wizard page
-</div>
-<wizard on-finish="finishedWizard()">
-    <wz-step title="Starting">
-        <h1>This is the first step</h1>
-        <p>Here you can use whatever you want. You can use other directives, binding, etc.</p>
-        <input type="submit" wz-next value="Continue" />
+﻿<wizard on-finish="finishedWizard()">
+    <wz-step title="Patient Info">
+        <div class="wizard-content">
+            <h3>Fill Patient Info</h3>
+            <form role="form">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label class="control-label">Patient Name</label>
+                            <input maxlength="30" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Patient Name" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">DOB</label>
+                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Date of Birth" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Phone</label>
+                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Phone Number" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Date</label>
+                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Intake Date" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Street Address</label>
+                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter Street Address" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">City</label>
+                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter City" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">State</label>
+                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter State" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Zip</label>
+                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Zip code" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="wizard-button">
+                <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
+            </div>
+        </div>
     </wz-step>
-    <wz-step title="Continuing">
-        <h1>Continuing</h1>
-        <p>You have continued here!</p>
-        <input type="submit" wz-next value="Go on" />
+    <wz-step title="Choose Antigen">
+        <div class="wizard-content">
+            <h3>Choose Antigents used in the Test</h3>
+            <div class="row">
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL A: GRASS</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL B: WEEDS 1</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL C: WEEDS 2</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL D: TREES 1</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL E: TREES 2</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL F: TREES 3</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL G: EPIDERMAL/INSECT</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL H: MOLDS</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL I: FOODS</h4>
+                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
+                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
+                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
+                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
+                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
+                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
+                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
+                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                </div><!--/.col-xs-6.col-lg-4-->
+            </div><!--/row-->
+            <div class="wizard-button">
+                <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
+                <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
+            </div>
+        </div>
     </wz-step>
-    <wz-step title="More steps">
-        <p>Even more steps!!</p>
-        <input type="submit" wz-next value="Finish now" />
+    <wz-step title="Test Result 1">
+        <div class="wizard-content" data-ng-controller="wizardController">
+            <h3>Fill Test Result 1</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Test Date</label><br>
+                        <p class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Testing Location</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="LocationRadioModel" btn-radio="'Back'">Back</label>
+                            <label class="btn btn-success" ng-model="LocationRadioModel" btn-radio="'Arms'">Arms</label>
+                            <label class="btn btn-success" ng-model="LocationRadioModel" btn-radio="'Right'">Right</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Skin Testing Consent Signed</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="SkinTestRadioModel" btn-radio="'Yes'">Yes</label>
+                            <label class="btn btn-success" ng-model="SkinTestRadioModel" btn-radio="'No'">No</label>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Antihistamine</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="AntihistamineRadioModel" btn-radio="'Yes'">Yes</label>
+                            <label class="btn btn-success" ng-model="AntihistamineRadioModel" btn-radio="'No'">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Asthma</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="AsthmaRadioModel" btn-radio="'Yes'">Yes</label>
+                            <label class="btn btn-success" ng-model="AsthmaRadioModel" btn-radio="'No'">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Sperometry Requested</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="SperometryReqRadioModel" btn-radio="'Yes'">Yes</label>
+                            <label class="btn btn-success" ng-model="SperometryReqRadioModel" btn-radio="'No'">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Sperometry Performed</label><br>
+                        <div class="btn-group">
+                            <label class="btn btn-success" ng-model="SperometryPerfRadioModel" btn-radio="'Yes'">Yes</label>
+                            <label class="btn btn-success" ng-model="SperometryPerfRadioModel" btn-radio="'No'">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="wizard-button">
+                        <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
+                        <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </wz-step>
+    <wz-step title="Test Result 2">
+        <div class="wizard-content">
+            <h3>Fill Test Result 2</h3>
+            <div class="row">
+                <div class="col-xs-6 col-lg-4">
+                    <h4>PANEL A: GRASS</h4>
+                    <div class="btn-group" ng-class='{open: open}'>
+                        <button class="btn">(mm)</button>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown" ng-click='open=!open'><span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><p>10 mm</p></li>
+                            <li><p>20 mm</p></li>
+                            <li><p>30 mm</p></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-xs-6.col-lg-4-->
+            </div>
+            <div class="wizard-button">
+                <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
+                <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
+            </div>
+        </div>
+    </wz-step>
+    <wz-step title="Sign and Submit">
+        <div class="wizard-content">
+            <h3>Sign the form and submit to AllergiMed</h3>
+            <p>Sign the form and submit to AllergiMed</p>
+            <div class="wizard-button">
+                <input type="submit" wz-next value="FiniNextsh" class="btn btn-primary nextBtn btn-lg" />
+                <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
+            </div>
+        </div>
     </wz-step>
 </wizard>

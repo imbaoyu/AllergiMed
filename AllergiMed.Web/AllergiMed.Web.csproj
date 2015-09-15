@@ -66,6 +66,12 @@
     <Content Include="app\views\patients.html" />
     <Content Include="app\views\proto.html" />
     <Content Include="app\views\wizard.html" />
+    <Content Include="bower_components\angular-bootstrap\index.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap.min.js" />
     <Content Include="bower_components\angular-wizard\dist\angular-wizard.css" />
     <Content Include="bower_components\angular-wizard\dist\angular-wizard.js" />
     <Content Include="bower_components\angular-wizard\dist\angular-wizard.min.css" />
@@ -448,6 +454,19 @@
     <Content Include="bower_components\angular-wizard\package.json" />
     <Content Include="bower_components\angular-wizard\README.md" />
     <Content Include="bower_components\angular-wizard\src\angular-wizard.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\angular-wizard\dist\angular-wizard.min.js.map">
+      <DependentUpon>angular-wizard.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\angular-bootstrap\.bower.json" />
+    <Content Include="bower_components\angular-bootstrap\.gitignore" />
+    <Content Include="bower_components\angular-bootstrap\.npmignore" />
+    <Content Include="bower_components\angular-bootstrap\bower.json" />
+    <Content Include="bower_components\angular-bootstrap\package.json" />
+    <Content Include="bower_components\angular-bootstrap\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

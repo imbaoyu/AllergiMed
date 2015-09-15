@@ -1,4 +1,5 @@
-﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'mgo-angular-wizard']);
+﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar',
+    'mgo-angular-wizard', 'ui.bootstrap']);
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/Dashboard", {

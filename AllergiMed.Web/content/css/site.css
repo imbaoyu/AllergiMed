@@ -104,8 +104,13 @@ body {
   border-radius: 50%;
 }
 
+.wizard-content {
+  margin: 50px 0 0 55px
+}
 
-
+.wizard-button {
+  margin: 20px 0 0 0
+}
 
 #footer {
     position: absolute;

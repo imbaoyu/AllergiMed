@@ -58,12 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\dashboardController.js" />
+    <Content Include="app\controllers\manageCaseController.js" />
     <Content Include="app\controllers\patientsController.js" />
     <Content Include="app\controllers\sidebarController.js" />
     <Content Include="app\controllers\wizardTestReportController.js" />
     <Content Include="app\controllers\wizardTestResultController.js" />
     <Content Include="app\services\patientsService.js" />
     <Content Include="app\views\dashboard.html" />
+    <Content Include="app\views\fakelogin.html" />
     <Content Include="app\views\managecase.html" />
     <Content Include="app\views\patients.html" />
     <Content Include="app\views\proto.html" />

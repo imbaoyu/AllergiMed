@@ -156,7 +156,7 @@
         </div>
     </wz-step>
     <wz-step title="Test Result 1">
-        <div class="wizard-content" data-ng-controller="wizardController">
+        <div class="wizard-content" data-ng-controller="wizardTestResultController">
             <h3>Fill Test Result 1</h3>
             <div class="row">
                 <div class="col-md-3">
@@ -243,19 +243,22 @@
         </div>
     </wz-step>
     <wz-step title="Test Result 2">
-        <div class="wizard-content">
+        <div class="wizard-content" data-ng-controller="wizardTestReportController">
             <h3>Fill Test Result 2</h3>
             <div class="row">
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL A: GRASS</h4>
-                    <div class="btn-group" ng-class='{open: open}'>
-                        <button class="btn">(mm)</button>
-                        <button class="btn dropdown-toggle" data-toggle="dropdown" ng-click='open=!open'><span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><p>10 mm</p></li>
-                            <li><p>20 mm</p></li>
-                            <li><p>30 mm</p></li>
-                        </ul>
+                <div class="col-xs-5 col-lg-5 wizard-report-panel" ng-repeat="panel in panelCollection">
+                    <h4>PANEL {{panel.index}}: {{panel.name}}</h4>
+                    <div class="row wizard-report-panel-item" ng-repeat="panelItem in panel.items">
+                        <div class="col-md-6">
+                            <label class="control-label">{{panelItem}}</label><br>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <label class="btn btn-success" ng-model="ControlModel" btn-radio="'10'">10</label>
+                                <label class="btn btn-success" ng-model="ControlModel" btn-radio="'20'">20</label>
+                                <label class="btn btn-success" ng-model="ControlModel" btn-radio="'30'">30</label>
+                            </div>
+                        </div>
                     </div>
                 </div><!--/.col-xs-6.col-lg-4-->
             </div>
@@ -270,7 +273,7 @@
             <h3>Sign the form and submit to AllergiMed</h3>
             <p>Sign the form and submit to AllergiMed</p>
             <div class="wizard-button">
-                <input type="submit" wz-next value="FiniNextsh" class="btn btn-primary nextBtn btn-lg" />
+                <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
                 <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
             </div>
         </div>

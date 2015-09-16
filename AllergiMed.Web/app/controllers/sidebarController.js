@@ -17,11 +17,7 @@ app.controller('sidebarController', ['$scope', '$location', 'authService', funct
         {
             name: 'Create Case Wizard',
             route: '/#/Wizard'
-        },
-        {
-            name: 'Manage Cases',
-            route: '/#/ManageCase'
-        },
+        }
     ];
 
     $scope.select = function (index) {

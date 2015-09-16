@@ -7,6 +7,7 @@
     <link href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" />
     <link href="bower_components/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
     <link href="bower_components/angular-wizard/dist/angular-wizard.css" rel="stylesheet" />
+    <link href="bower_components/ng-table/dist/ng-table.css" rel="stylesheet" />
     <link href="content/css/site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
@@ -29,9 +30,10 @@
             </div>
         </div>
     </nav>
+    
+    <div ng-include src="'app/views/fakelogin.html'"></div>
 
-
-    <div class="container-fluid">
+    <div class="container-fluid" ng-show="false">
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar" data-ng-controller="sidebarController">
                 <ul class="nav nav-sidebar">
@@ -54,6 +56,7 @@
     <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular-wizard/dist/angular-wizard.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.js"></script>
     <!-- Load app main script -->
     <script src="app/app.js"></script>
     <!-- Load services -->
@@ -67,7 +70,9 @@
     <script src="app/controllers/loginController.js"></script>
     <script src="app/controllers/signupController.js"></script>
     <script src="app/controllers/patientsController.js"></script>
-    <script src="app/controllers/wizardController.js"></script>
+    <script src="app/controllers/wizardTestResultController.js"></script>
+    <script src="app/controllers/wizardTestReportController.js"></script>
+    <script src="app/controllers/manageCaseController.js"></script>
     <!--script src="app/controllers/dashboardController.js"></!--script-->
 </body>
 </html>

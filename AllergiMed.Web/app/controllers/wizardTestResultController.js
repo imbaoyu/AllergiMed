@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('wizardController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+app.controller('wizardTestResultController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
     $scope.today = function () {
             $scope.dt = new Date();
         };

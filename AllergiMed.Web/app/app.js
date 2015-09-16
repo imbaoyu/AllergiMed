@@ -1,5 +1,5 @@
 ﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar',
-    'mgo-angular-wizard', 'ui.bootstrap']);
+    'mgo-angular-wizard', 'ui.bootstrap', 'ngTable']);
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/Dashboard", {
@@ -14,6 +14,17 @@ app.config(function ($routeProvider) {
         controller: "homeController",
         templateUrl: "/app/views/home.html"
     });
+
+    $routeProvider.when("/ManageCase", {
+        controller: "manageCaseController",
+        templateUrl: "/app/views/managecase.html"
+    });
+
+    //
+    //$routeProvider.when("/manage", {
+    //    controller: "homeController",
+    //    templateUrl: "/app/views/home.html"
+    //});
 
     $routeProvider.when("/login", {
         controller: "loginController",

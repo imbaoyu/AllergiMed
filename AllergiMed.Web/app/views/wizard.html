@@ -46,109 +46,16 @@
         </div>
     </wz-step>
     <wz-step title="Choose Antigen">
-        <div class="wizard-content">
+        <div class="wizard-content" data-ng-controller="wizardAntigenController">
             <h3>Choose Antigents</h3>
             <div class="row">
-                <div class="col-xs-6 col-lg-4">
+                <div class="col-xs-6 col-lg-4" ng-repeat="panel in panelCollection">
                     <h4>PANEL A: GRASS</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
+                    <div ng-repeat="panelItem in panel.items">
+                        <input type ="checkbox" name="positiveControl" value="positiveControl"> {{panelItem}}
+                    </div>               
                 </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL B: WEEDS 1</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL C: WEEDS 2</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL D: TREES 1</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL E: TREES 2</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL F: TREES 3</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL G: EPIDERMAL/INSECT</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL H: MOLDS</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-                <div class="col-xs-6 col-lg-4">
-                    <h4>PANEL I: FOODS</h4>
-                    <input type="checkbox" name="positiveControl" value="positiveControl"> POSITIVE CONTROL<br>
-                    <input type="checkbox" name="negativeControl" value="positiveControl"> NEGATIVE CONTROL<br>
-                    <input type="checkbox" name="alfalfa" value="positiveControl"> ALFALFA<br>
-                    <input type="checkbox" name="bermudaGrass" value="bermudaGrass"> BERMUDA GRASS<br>
-                    <input type="checkbox" name="johnsonGrass" value="johnsonGrass"> JOHNSON GRASS<br>
-                    <input type="checkbox" name="kentuckyBlue" value="kentuckyBlue"> KENTUCKY BLUE<br>
-                    <input type="checkbox" name="perennialRyeGrass" value="perennialRyeGrass"> PERENNIAL RYE GRASS<br>
-                    <input type="checkbox" name="timothyGrass" value="timothyGrass"> TIMOTHY GRASS<br>
-                </div><!--/.col-xs-6.col-lg-4-->
-            </div><!--/row-->
+            </div>
             <div class="wizard-button">
                 <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
                 <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
@@ -190,7 +97,7 @@
                             <label class="btn btn-success" ng-model="SkinTestRadioModel" btn-radio="'No'">No</label>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
@@ -270,17 +177,19 @@
     </wz-step>
     <wz-step title="Sign and Submit">
         <div class="wizard-content">
-            <h3>Sign the form and submit to AllergiMed</h3>
-            <div id="signature-pad" class="m-signature-pad">
-                <div class="m-signature-pad--body">
-                    <canvas></canvas>
+            <h3>Sign the form here and submit to AllergiMed</h3>
+            <!--
+                <div id="signature-pad" class="m-signature-pad">
+                    <div class="m-signature-pad--body">
+                        <canvas></canvas>
+                    </div>
+                    <div class="m-signature-pad--footer">
+                        <div class="description">Sign above</div>
+                        <button class="button clear" data-action="clear">Clear</button>
+                        <button class="button save" data-action="save">Save</button>
+                    </div>
                 </div>
-                <div class="m-signature-pad--footer">
-                    <div class="description">Sign above</div>
-                    <button class="button clear" data-action="clear">Clear</button>
-                    <button class="button save" data-action="save">Save</button>
-                </div>
-            </div>
+                -->
             <div class="wizard-button">
                 <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
                 <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />

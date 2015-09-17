@@ -9,19 +9,19 @@ app.controller('manageCaseController', ['NgTableParams', function (NgTableParams
         },
         {
             'id': '2',
-            'patientName': 'John Dorr',
+            'patientName': 'Mike West',
             'intakeDate': '16-Sep-2015',
             'status': 'Pending Test Result'
         },
         {
             'id': '3',
-            'patientName': 'John Dorr',
+            'patientName': 'David Ediloud',
             'intakeDate': '16-Sep-2015',
             'status': 'Pending Test Result'
         },
         {
             'id': '4',
-            'patientName': 'John Dorr',
+            'patientName': 'Bradley Monte',
             'intakeDate': '16-Sep-2015',
             'status': 'Pending Test Result'
         }

@@ -1,3 +1,16 @@
-﻿<div>
-    This is your dashboard!!
+﻿<div class="dashboard" data-ng-controller="dashboardController">
+    <div class="dashboard-item">
+        <h1>Managing <b>{{patientsNumber}}</b> patients</h1>
+        <input type="button" ng-click="managePatient()" value="Manage Patients" class="btn btn-primary btn-lg" />
+        <input type="button" ng-click="createPatient()" value="Create New Patient" class="btn btn-primary btn-lg" />
+    </div>
+    <div class="dashboard-item">
+        <h1><b>{{processedCase}}</b> cases have been processed</h1>
+        <input type="button" ng-click="manageCase()" value="Manage Cases" class="btn btn-primary btn-lg" />
+        <input type="button" ng-click="createCase()" value="Create New Case" class="btn btn-primary btn-lg" />
+    </div>
+    <div class="dashboard-item">
+        <h1><b>{{pendingCase}}</b> cases pending</h1>
+        <input type="button" ng-click="manageCase()" value="View Pending Cases" class="btn btn-primary btn-lg" />
+    </div>
 </div>

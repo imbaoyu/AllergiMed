@@ -58,12 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\dashboardController.js" />
+    <Content Include="app\controllers\fakeLoginController.js" />
     <Content Include="app\controllers\manageCaseController.js" />
     <Content Include="app\controllers\patientsController.js" />
     <Content Include="app\controllers\sidebarController.js" />
     <Content Include="app\controllers\wizardTestReportController.js" />
     <Content Include="app\controllers\wizardTestResultController.js" />
     <Content Include="app\services\patientsService.js" />
+    <Content Include="app\services\signaturePadService.js" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\fakelogin.html" />
     <Content Include="app\views\managecase.html" />
@@ -153,6 +155,12 @@
     <Content Include="bower_components\ng-table\test\tableDynamicSpec.js" />
     <Content Include="bower_components\ng-table\test\tableParamsSpec.js" />
     <Content Include="bower_components\ng-table\test\tableSpec.js" />
+    <Content Include="bower_components\signature_pad\example\css\signature-pad.css" />
+    <Content Include="bower_components\signature_pad\example\index.html" />
+    <Content Include="bower_components\signature_pad\example\js\app.js" />
+    <Content Include="bower_components\signature_pad\example\js\signature_pad.js" />
+    <Content Include="bower_components\signature_pad\signature_pad.js" />
+    <Content Include="bower_components\signature_pad\signature_pad.min.js" />
     <Content Include="proto\admincase.html" />
     <Content Include="proto\managecase.css" />
     <Content Include="proto\managecase.html" />
@@ -578,6 +586,11 @@
     <Content Include="bower_components\ng-table\README.md" />
     <Content Include="bower_components\ng-table\RELEASING.md" />
     <Content Include="bower_components\ng-table\test\.jsbeautifyrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\signature_pad\.bower.json" />
+    <Content Include="bower_components\signature_pad\bower.json" />
+    <Content Include="bower_components\signature_pad\README.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

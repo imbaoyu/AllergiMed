@@ -3,6 +3,7 @@
 
 app.config(function ($routeProvider) {
     $routeProvider.when("/Dashboard", {
+        controller: "dashboardController",
         templateUrl: "/app/views/dashboard.html"
     });
 
@@ -10,21 +11,15 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/wizard.html"
     });
 
-    $routeProvider.when("/home", {
-        controller: "homeController",
-        templateUrl: "/app/views/home.html"
-    });
-
     $routeProvider.when("/ManageCase", {
         controller: "manageCaseController",
         templateUrl: "/app/views/managecase.html"
     });
 
-    //
-    //$routeProvider.when("/manage", {
-    //    controller: "homeController",
-    //    templateUrl: "/app/views/home.html"
-    //});
+    $routeProvider.when("/ManagePatient", {
+        controller: "managePatientController",
+        templateUrl: "/app/views/managepatient.html"
+    });
 
     $routeProvider.when("/login", {
         controller: "loginController",
@@ -56,7 +51,7 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/associate.html"
     });
 
-    $routeProvider.otherwise({ redirectTo: "/home" });
+    $routeProvider.otherwise({ redirectTo: "/Dashboard" });
 
 });
 
@@ -71,6 +66,7 @@ app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 });
 
-app.run(['authService', function (authService) {
+app.run(['authService', '$rootScope', function (authService, $rootScope) {
     authService.fillAuthData();
+    $rootScope.isLogin = false;
 }]);

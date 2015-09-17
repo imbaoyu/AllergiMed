@@ -47,7 +47,7 @@
     </wz-step>
     <wz-step title="Choose Antigen">
         <div class="wizard-content">
-            <h3>Choose Antigents used in the Test</h3>
+            <h3>Choose Antigents</h3>
             <div class="row">
                 <div class="col-xs-6 col-lg-4">
                     <h4>PANEL A: GRASS</h4>
@@ -271,7 +271,16 @@
     <wz-step title="Sign and Submit">
         <div class="wizard-content">
             <h3>Sign the form and submit to AllergiMed</h3>
-            <p>Sign the form and submit to AllergiMed</p>
+            <div id="signature-pad" class="m-signature-pad">
+                <div class="m-signature-pad--body">
+                    <canvas></canvas>
+                </div>
+                <div class="m-signature-pad--footer">
+                    <div class="description">Sign above</div>
+                    <button class="button clear" data-action="clear">Clear</button>
+                    <button class="button save" data-action="save">Save</button>
+                </div>
+            </div>
             <div class="wizard-button">
                 <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
                 <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />

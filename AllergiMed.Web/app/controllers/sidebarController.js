@@ -12,11 +12,7 @@ app.controller('sidebarController', ['$scope', '$location', 'authService', funct
         },
         {
             name: 'Manage Patients',
-            route: '/#/ManagePatients'
-        },
-        {
-            name: 'Create Case Wizard',
-            route: '/#/Wizard'
+            route: '/#/ManagePatient'
         }
     ];
 

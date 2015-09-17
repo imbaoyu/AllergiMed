@@ -20,7 +20,8 @@
     "underscore": "~1.8.3",
     "angular-wizard": "~0.5.4",
     "angular-bootstrap": "~0.13.4",
-    "ng-table": "~0.8.3"
+    "ng-table": "~0.8.3",
+    "signature_pad": "~1.5.0"
   },
   "resolutions": {
     "font-awesome": "~4.3"

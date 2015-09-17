@@ -2,7 +2,7 @@
     <h2 class="page-header">Case List</h2>
     <table ng-table="case.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data track by row.id">
-            <td title="'Case Id'" sortable="'caseId'">{{row.id}}</td>
+            <td title="'Case Id'" sortable="'id'">{{row.id}}</td>
             <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patientName'">{{row.patientName}}</td>
             <td title="'Intake Date'" sortable="'intakeDate'">{{row.intakeDate}}</td>
             <td title="'Case Status'" filter="{poweredBy: 'text'}" sortable="'status'">{{row.status}}</td>

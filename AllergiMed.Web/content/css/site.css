@@ -11,6 +11,10 @@ body {
     color: #8AC007
 }
 
+.sidebar li {
+    font-size: 18px
+}
+
 .login-box {
     padding-top: 40px;
 }

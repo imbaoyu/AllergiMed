@@ -1,5 +1,5 @@
 ﻿<div ng-controller="managePatientController as patient">
-    <h2 class="page-header">Case List</h2>
+    <h2 class="page-header">Patients List</h2>
     <table ng-table="patient.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data track by row.id">
             <td title="'Id'" sortable="'id'">{{row.id}}</td>

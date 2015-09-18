@@ -18,12 +18,12 @@
                 <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </button>
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="#/Dashboard">Home</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="#/Settings">Settings</a></li>
                     <li><a href="#/Profile">Profile</a></li>
                     <li><a href="#/Help">Help</a></li>
                 </ul>
@@ -64,6 +64,7 @@
     <script src="app/services/authInterceptorService.js"></script>
     <script src="app/services/authService.js"></script>
     <script src="app/services/patientService.js"></script>
+    <script src="app/services/caseService.js"></script>
     <script src="app/services/antigenService.js"></script>
     <!--script src="app/services/signaturePadService.js"></!--script-->
     <!-- Load controllers -->

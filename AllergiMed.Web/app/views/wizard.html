@@ -1,47 +1,47 @@
 ﻿<wizard on-finish="finishedWizard()">
     <wz-step title="Patient Info">
-        <div class="wizard-content">
+        <div class="wizard-content" data-ng-controller="createPatientController">
             <h3>Fill Patient Info</h3>
             <form role="form">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group">
                             <label class="control-label">Patient Name</label>
-                            <input maxlength="30" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Patient Name" />
+                            <input ng-model="patient.patientName" maxlength="30" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Patient Name" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">DOB</label>
-                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Date of Birth" />
+                            <input ng-model="patient.dob" length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Date of Birth" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">Phone</label>
-                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Phone Number" />
+                            <input ng-model="patient.phone" length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Phone Number" />
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Date</label>
-                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Intake Date" />
+                            <label class="control-label">Intake Date</label>
+                            <input ng-model="patient.intakeDate" length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Intake Date" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">Street Address</label>
-                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter Street Address" />
+                            <input ng-model="patient.address" length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter Street Address" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">City</label>
-                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter City" />
+                            <input ng-model="patient.city" length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter City" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">State</label>
-                            <input length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter State" />
+                            <input ng-model="patient.state" length="100" style="width: 500px;" type="text" required="required" class="form-control" placeholder="Enter State" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">Zip</label>
-                            <input length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Zip code" />
+                            <input ng-model="patient.zip" length="50" style="width: 300px;" type="text" required="required" class="form-control" placeholder="Enter Zip code" />
                         </div>
                     </div>
                 </div>
             </form>
             <div class="wizard-button">
-                <input type="submit" wz-next value="Next" class="btn btn-primary nextBtn btn-lg" />
+                <input type="submit" wz-next value="Next" ng-click="next(patient)" class="btn btn-primary nextBtn btn-lg" />
             </div>
         </div>
     </wz-step>
@@ -198,7 +198,7 @@
             <div>
                 <input maxlength="30" style="width: 300px;" type="text" required="required" placeholder="Patient Signature" />
                 <input maxlength="30" style="width: 300px;" type="text" required="required" placeholder="Doctor Signature" />
-                <p> Note: this will be replaced by the digital signature widget in next version
+                <p> (*)Note: this will be replaced by the digital signature widget in next release
             </div>
             <!--
                 <div id="signature-pad" class="m-signature-pad">

@@ -71,10 +71,15 @@ app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 });
 
-app.run(['authService', '$rootScope', '$location', function (authService, $rootScope, $location) {
+app.run(['authService', '$rootScope', '$location', 'caseService', function (authService, $rootScope, $location, caseService) {
     authService.fillAuthData();
     $rootScope.isLogin = false;
-    $rootScope.finishedWizard = function() {
+    $rootScope.finishedWizard = function () {
+        if ($rootScope.pendingCase !== null) {
+            $rootScope.pendingCase.status = 'pending';
+            caseService.addCase($rootScope.pendingCase);
+            $rootScope.pendingCase = null;
+        }
         $location.path('/Dashboard');
     }
 }]);

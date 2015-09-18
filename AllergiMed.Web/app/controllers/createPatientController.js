@@ -15,8 +15,15 @@ app.controller('createPatientController', ['$rootScope', '$scope', '$location', 
         $rootScope.editingPatientId = null;
     };
 
-    $scope.cancel = function () {
+    $scope.cancel = function() {
         $location.path('/Dashboard');
+    };
+
+    $scope.next = function (patient) {
+        $rootScope.pendingCase = {};
+        $rootScope.pendingCase.intakeDate = patient.intakeDate;
+        var pat = patientService.addPatient(patient);
+        $rootScope.pendingCase.patientId = pat.id;
     }
 
     $scope.save = function() {

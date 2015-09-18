@@ -1,12 +1,12 @@
 ﻿<div ng-controller="manageCaseController as case">
-    <h2 class="page-header">Case List</h2>
+    <h2 class="page-header">Cases List</h2>
     <table ng-table="case.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data track by row.id">
             <td title="'Id'" sortable="'id'">{{row.id}}</td>
-            <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patientName'">{{row.patientName}}</td>
+            <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patientName'">{{row.patient.patientName}}</td>
             <td title="'Intake Date'" sortable="'intakeDate'">{{row.intakeDate}}</td>
             <td title="'Case Status'" filter="{poweredBy: 'text'}" sortable="'status'">{{row.status}}</td>
-            <td><input type="submit" value="Manage" class="btn" /> <input type="submit" value="View" class="btn" /> </td>
+            <td><input type="submit" value="Manage" class="btn" ng-click="manage(row.id)"/> <input type="submit" value="View" class="btn" /> </td>
         </tr>
     </table>
 </div>

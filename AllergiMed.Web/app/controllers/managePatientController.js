@@ -1,33 +1,17 @@
 ﻿'use strict';
-app.controller('managePatientController', ['NgTableParams', 'patientService', function(NgTableParams, patientService) {
-    var caseList = [
-        {
-            'id': '1',
-            'patientName': 'John Dorr',
-            'dob': '16-Sep-2015',
-            'address': '123 Main Street'
-        },
-        {
-            'id': '2',
-            'patientName': 'Mike Sanity',
-            'dob': '16-Sep-2015',
-            'address': 'Apt 34, 7985 Commercial Ave'
-        },
-        {
-            'id': '3',
-            'patientName': 'Jose Valdes',
-            'dob': '16-Sep-2015',
-            'address': '798 Spanish River Street'
-        },
-        {
-            'id': '4',
-            'patientName': 'Jane Dores',
-            'dob': '16-Sep-2015',
-            'address': '762 66th Street'
-        }
-    ];
-
+app.controller('managePatientController', ['$location', '$rootScope', '$scope', 'NgTableParams', 'patientService', function (
+    $location, $rootScope, $scope, NgTableParams, patientService) {
     var patientList = patientService.getPatients();
+
+    $scope.edit = function(id) {
+        $rootScope.editingPatientId = id;
+        $location.path('/CreatePatient');
+    }
+
+    $scope.delete = function (id) {
+        patientService.deletePatient(id);
+        $location.path('/Dashboard');
+    }
 
     this.tableParams = new NgTableParams({
         page: 1, // show first page
@@ -36,5 +20,4 @@ app.controller('managePatientController', ['NgTableParams', 'patientService', fu
         filterDelay: 0,
         data: patientList
     });
-
 }]);

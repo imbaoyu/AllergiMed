@@ -1,7 +1,7 @@
 ﻿'use strict';
 app.controller('dashboardController', ['$scope', '$location', 'authService', 'patientService', function (
     $scope, $location, authService, patientService) {
-    $scope.patientsNumber = patientService.getPatients.length;
+    $scope.patientsNumber = patientService.getPatients().length;
     $scope.processedCase = 23;
     $scope.pendingCase = 5;
 

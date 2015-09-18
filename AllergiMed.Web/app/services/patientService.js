@@ -12,7 +12,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '123 Main Street',
             city: 'Miami',
             state: 'FL',
-            Zip: '12345'
+            zip: '12345'
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '456 Back Street',
             city: 'Fort Lauderdale',
             state: 'FL',
-            Zip: '87345'
+            zip: '87345'
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: 'Apt 304 Tent 33 34th street',
             city: 'Fort Lauderdale',
             state: 'FL',
-            Zip: '87346'
+            zip: '87346'
         },
         {
             id: 4,
@@ -42,7 +42,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '17324 Masha Way',
             city: 'Coral Springs',
             state: 'FL',
-            Zip: '64354'
+            zip: '64354'
         },
         {
             id: 5,
@@ -52,7 +52,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '9988 Huntsman street',
             city: 'Miami Beach',
             state: 'FL',
-            Zip: '98345'
+            zip: '98345'
         },
         {
             id: 6,
@@ -62,7 +62,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '453 Walter Street',
             city: 'West Palm Beach',
             state: 'FL',
-            Zip: '23412'
+            zip: '23412'
         },
         {
             id: 7,
@@ -72,7 +72,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '786 Collin Ave',
             city: 'Delray Beach',
             state: 'FL',
-            Zip: '45334'
+            zip: '45334'
         },
         {
             id: 8,
@@ -82,7 +82,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '33 Amsterdan Street',
             city: 'Boca Raton',
             state: 'FL',
-            Zip: '33434'
+            zip: '33434'
         },
         {
             id: 9,
@@ -92,7 +92,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: 'Apt 708, 1345 park ave',
             city: 'Deerfield Beach',
             state: 'FL',
-            Zip: '45362'
+            zip: '45362'
         },
         {
             id: 10,
@@ -102,7 +102,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '3894 5th ave',
             city: 'Fort Lauderdale',
             state: 'FL',
-            Zip: '43212'
+            zip: '43212'
         },
         {
             id: 11,
@@ -112,7 +112,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
             address: '1654 Broadway',
             city: 'Miami',
             state: 'FL',
-            Zip: '34352'
+            zip: '34352'
         }
     ];
 
@@ -130,13 +130,31 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
         return null;
     };
 
+    var deletePatient = function (id) {
+        for (var i = 0; i < collection.length; i++) {
+            if (collection[i].id === id) {
+                collection.splice(i, 1);
+            }
+        }
+    }
+
     var addPatient = function (patient) {
-        patient.id = collection.length;
+        for (var i = 0; i < collection.length; i++) {
+            if (collection[i].id === patient.id) {
+                //replace the existing one
+                collection[i] = patient;
+                return patient;
+            }
+        }
+
+        patient.id = collection.length+1;
         collection.push(patient);
+        return patient;
     };
 
     patientServiceFactory.getPatients = getPatients;
     patientServiceFactory.getPatient = getPatient;
+    patientServiceFactory.deletePatient = deletePatient;
     patientServiceFactory.addPatient = addPatient;
 
     return patientServiceFactory;

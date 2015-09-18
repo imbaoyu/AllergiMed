@@ -21,6 +21,11 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/managepatient.html"
     });
 
+    $routeProvider.when("/CreatePatient", {
+        controller: "createPatientController",
+        templateUrl: "/app/views/createPatient.html"
+    });
+
     $routeProvider.when("/login", {
         controller: "loginController",
         templateUrl: "/app/views/login.html"
@@ -66,7 +71,10 @@ app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 });
 
-app.run(['authService', '$rootScope', function (authService, $rootScope) {
+app.run(['authService', '$rootScope', '$location', function (authService, $rootScope, $location) {
     authService.fillAuthData();
     $rootScope.isLogin = false;
+    $rootScope.finishedWizard = function() {
+        $location.path('/Dashboard');
+    }
 }]);

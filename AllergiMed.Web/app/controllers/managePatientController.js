@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('managePatientController', ['NgTableParams', function (NgTableParams) {
+app.controller('managePatientController', ['NgTableParams', 'patientService', function(NgTableParams, patientService) {
     var caseList = [
         {
             'id': '1',
@@ -27,16 +27,14 @@ app.controller('managePatientController', ['NgTableParams', function (NgTablePar
         }
     ];
 
+    var patientList = patientService.getPatients();
+
     this.tableParams = new NgTableParams({
         page: 1, // show first page
         count: 10 // count per page
     }, {
         filterDelay: 0,
-        data: caseList
+        data: patientList
     });
 
-}]).service('demoDataGenerator', function () {
-
-
-    this.generateData = generateData;
-});
+}]);

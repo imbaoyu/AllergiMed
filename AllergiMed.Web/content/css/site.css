@@ -7,8 +7,16 @@ body {
   padding-top: 50px;
 }
 
+.title h1 {
+    color: #8AC007
+}
+
 .login-box {
     padding-top: 40px;
+}
+
+.login-box h2 {
+    color: #8AC007
 }
 
 .dashboard h1 {
@@ -117,6 +125,11 @@ body {
 
 .wizard-content {
   margin: 50px 0 0 55px
+}
+
+.wizard-content h3,
+.wizard-content div h4 {
+  color:#8ac007
 }
 
 .wizard-button {

@@ -35,8 +35,4 @@ app.controller('manageCaseController', ['NgTableParams', function (NgTableParams
         data: caseList
     });
 
-}]).service('demoDataGenerator', function () {
-   
-
-    this.generateData = generateData;
-});
+}]);

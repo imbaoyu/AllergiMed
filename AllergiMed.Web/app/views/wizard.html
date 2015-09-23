@@ -200,22 +200,11 @@
                 <input maxlength="30" style="width: 300px;" type="text" required="required" placeholder="Doctor Signature" />
                 <p> (*)Note: this will be replaced by the digital signature widget in next release
             </div>
-            <!--
-                <div id="signature-pad" class="m-signature-pad">
-                    <div class="m-signature-pad--body">
-                        <canvas></canvas>
-                    </div>
-                    <div class="m-signature-pad--footer">
-                        <div class="description">Sign above</div>
-                        <button class="button clear" data-action="clear">Clear</button>
-                        <button class="button save" data-action="save">Save</button>
-                    </div>
-                </div>
-                -->
+            <div am-signature></div>
             <div class="wizard-button">
-                <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
-                <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
-            </div>
-        </div>
+                    <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
+                    <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
+                </div>
+</div>
     </wz-step>
 </wizard>

@@ -9,6 +9,7 @@
     <link href="bower_components/angular-wizard/dist/angular-wizard.css" rel="stylesheet" />
     <link href="bower_components/ng-table/dist/ng-table.css" rel="stylesheet" />
     <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/signature-pad.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
@@ -50,6 +51,7 @@
         </div>
     </div>
     <!-- 3rd party libraries -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -58,15 +60,17 @@
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular-wizard/dist/angular-wizard.js"></script>
     <script src="bower_components/ng-table/dist/ng-table.js"></script>
+    <script src="bower_components/signature_pad/signature_pad.js"></script>
     <!-- Load app main script -->
     <script src="app/app.js"></script>
+    <!-- Load directives -->
+    <script src="app/directives/amSignatruePad.js"></script>
     <!-- Load services -->
     <script src="app/services/authInterceptorService.js"></script>
     <script src="app/services/authService.js"></script>
     <script src="app/services/patientService.js"></script>
     <script src="app/services/caseService.js"></script>
     <script src="app/services/antigenService.js"></script>
-    <!--script src="app/services/signaturePadService.js"></!--script-->
     <!-- Load controllers -->
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/sidebarController.js"></script>

@@ -20,6 +20,8 @@ app.controller('createPatientController', ['$rootScope', '$scope', '$location', 
     };
 
     $scope.next = function (patient) {
+        if (!patient) return;
+
         $rootScope.pendingCase = {};
         $rootScope.pendingCase.intakeDate = patient.intakeDate;
         var pat = patientService.addPatient(patient);

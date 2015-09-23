@@ -139,6 +139,10 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
     }
 
     var addPatient = function (patient) {
+        if (!patient) {
+            return null;
+        }
+
         for (var i = 0; i < collection.length; i++) {
             if (collection[i].id === patient.id) {
                 //replace the existing one

@@ -67,7 +67,10 @@
     <Content Include="app\controllers\wizardAntigenController.js" />
     <Content Include="app\controllers\wizardTestReportController.js" />
     <Content Include="app\controllers\wizardTestResultController.js" />
+    <Content Include="app\directives\amSignatruePad.js" />
+    <Content Include="app\views\amSignaturePadTemplate.html" />
     <Content Include="app\services\antigenService.js" />
+    <Content Include="app\services\caseService.js" />
     <Content Include="app\services\patientService.js" />
     <Content Include="app\services\patientsService.js" />
     <Content Include="app\services\signaturePadService.js" />

@@ -196,15 +196,19 @@
                 <p> I have read and understand the purpose of allergy testing, the testing techniques used and the risks involved as described above, and I am interested in proceeding. I understand that any allergiMed therapy that my physician prescribes will be purchased for me from allergiMed by my physician. I understand that the therapy is not mandatory and that I may refuse the therapy if I so choose. The allergiMed Immunotherapy will be shipped to my physician’s office so that I may be instructed on its use. CA and TX residents’, allergiMed will act as my agent in receiving my prescription and shipping it to its destination.
             </div>
             <div>
-                <input maxlength="30" style="width: 300px;" type="text" required="required" placeholder="Patient Signature" />
-                <input maxlength="30" style="width: 300px;" type="text" required="required" placeholder="Doctor Signature" />
-                <p> (*)Note: this will be replaced by the digital signature widget in next release
-            </div>
-            <div am-signature></div>
-            <div class="wizard-button">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div am-signature></div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div am-signature></div>
+                    </div>
+                </div>
+                <div class="wizard-button">
                     <input type="submit" wz-next value="Finish" class="btn btn-primary nextBtn btn-lg" />
                     <input type="submit" wz-previous value="Previous" class="btn btn-primary nextBtn btn-lg" />
                 </div>
+            </div>
 </div>
     </wz-step>
 </wizard>

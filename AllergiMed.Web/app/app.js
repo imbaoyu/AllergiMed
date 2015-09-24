@@ -13,12 +13,12 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/ManageCase", {
         controller: "manageCaseController",
-        templateUrl: "/app/views/managecase.html"
+        templateUrl: "/app/views/manageCase.html"
     });
 
     $routeProvider.when("/ManagePatient", {
         controller: "managePatientController",
-        templateUrl: "/app/views/managepatient.html"
+        templateUrl: "/app/views/managePatient.html"
     });
 
     $routeProvider.when("/CreatePatient", {

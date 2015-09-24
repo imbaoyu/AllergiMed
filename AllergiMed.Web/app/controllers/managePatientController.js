@@ -1,23 +1,31 @@
 ﻿'use strict';
-app.controller('managePatientController', ['$location', '$rootScope', '$scope', 'NgTableParams', 'patientService', function (
-    $location, $rootScope, $scope, NgTableParams, patientService) {
-    var patientList = patientService.getPatients();
+app.controller('managePatientController', ['$location', '$scope', 'NgTableParams', 'patientsService', function (
+    $location, $scope, NgTableParams, patientsService) {
 
-    $scope.edit = function(id) {
-        $rootScope.editingPatientId = id;
+    var patientList = patientsService.getAllPatients();
+
+    $scope.edit = function(patient) {
+        patientsService.setSelectedPatient(patient);
         $location.path('/CreatePatient');
     }
 
     $scope.delete = function (id) {
-        patientService.deletePatient(id);
-        $location.path('/Dashboard');
+        patientsService.deletePatientById(id);
+        patientList = patientsService.getAllPatients();
+        this.tableParams.reload();
+        //$location.path('/Dashboard');
     }
 
-    this.tableParams = new NgTableParams({
-        page: 1, // show first page
-        count: 10 // count per page
-    }, {
-        filterDelay: 0,
-        data: patientList
-    });
-}]);
+    this.tableParams = new NgTableParams(
+        {
+            page: 1, // show first page
+            count: 10 // count per page
+        },
+        {
+            filterDelay: 0,
+            getData: function ($defer, params) {
+                $defer.resolve(patientList);
+            }
+        });
+    }
+]);

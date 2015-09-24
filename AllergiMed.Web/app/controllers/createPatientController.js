@@ -1,35 +1,40 @@
 ﻿'use strict';
-app.controller('createPatientController', ['$rootScope', '$scope', '$location', 'NgTableParams', 'patientService', function (
-    $rootScope, $scope, $location, NgTableParams, patientService) {
+app.controller('createPatientController', ['$scope', '$location', 'patientsService',
+    function ($scope, $location, patientsService) {
     
-    if ($rootScope.editingPatientId !== null) {
-        $scope.patient = patientService.getPatient($rootScope.editingPatientId);
-        $scope.action = 'Edit';
-    } else {
-        $scope.patient = {};
-        $scope.action = 'Create';
-    }
+        //set the patient currently being edited
+        //if creating a new patient set it to null
+        $scope.patient = patientsService.getSelectedPatient();
+        if ($scope.patient == null) {
+            $scope.action = 'Create';
+        }
+        else {
+            $scope.action = 'Edit';
+        }
 
-    $scope.clear = function () {
-        $scope.patient = {};
-        $rootScope.editingPatientId = null;
-    };
+        $scope.clear = function () {
+            $scope.patient = {};
+            patientsService.setSelectedPatient(null);
+        };
 
-    $scope.cancel = function() {
-        $location.path('/Dashboard');
-    };
+        $scope.cancel = function() {
+            $location.path('/Dashboard');
+        };
 
-    $scope.next = function (patient) {
-        if (!patient) return;
+        $scope.save = function () {
+            patientsService.addPatient($scope.patient);
+            $location.path('/ManagePatient');
+        };
 
-        $rootScope.pendingCase = {};
-        $rootScope.pendingCase.intakeDate = patient.intakeDate;
-        var pat = patientService.addPatient(patient);
-        $rootScope.pendingCase.patientId = pat.id;
-    }
+        //only used in create case wizard
+        $scope.next = function (patient) {
+            if (!$scope.patient) return;
 
-    $scope.save = function() {
-        patientService.addPatient($scope.patient);
-        $location.path('/ManagePatient');
-    };
+            $rootScope.pendingCase = {};
+            $rootScope.pendingCase.intakeDate = patient.intakeDate;
+
+            //add a patient implicitly
+            var pat = patientsService.addPatient(patient);
+            $rootScope.pendingCase.patientId = pat.id;
+        }
 }]);

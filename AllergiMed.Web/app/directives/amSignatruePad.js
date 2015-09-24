@@ -3,7 +3,7 @@ app.directive('amSignature', function () {
 
     return {
         restrict: 'A',
-        templateUrl: '/app/views/amSignaturePadTemplate.html',
+        templateUrl: '/app/views/directives/amSignaturePadTemplate.html',
         link: function (scope, element, attr) {
                 var clearButton = element.find("[data-action=clear]").get(0),
                     saveButton = element.find("[data-action=save]").get(0),

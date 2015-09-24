@@ -1,11 +1,11 @@
 ﻿'use strict';
-app.controller('manageCaseController', ['$scope', '$location', '$rootScope', 'NgTableParams', 'caseService', 'patientService', function (
-    $scope, $location, $rootScope, NgTableParams, caseService, patientService) {
+app.controller('manageCaseController', ['$scope', '$location', '$rootScope', 'NgTableParams', 'caseService', 'patientsService', function (
+    $scope, $location, $rootScope, NgTableParams, caseService, patientsService) {
     
     var caseList = caseService.getCases();
 
     for (var i = 0; i < caseList.length; i++) {
-        caseList[i].patient = patientService.getPatient(caseList[i].patientId);
+        caseList[i].patient = patientsService.getPatient(caseList[i].patientId);
     }
 
     this.tableParams = new NgTableParams({

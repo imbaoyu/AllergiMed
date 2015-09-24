@@ -68,11 +68,11 @@
     <Content Include="app\controllers\wizardTestReportController.js" />
     <Content Include="app\controllers\wizardTestResultController.js" />
     <Content Include="app\directives\amSignatruePad.js" />
-    <Content Include="app\views\amSignaturePadTemplate.html" />
+    <Content Include="app\views\directives\amSignaturePadTemplate.html" />
     <Content Include="app\services\antigenService.js" />
     <Content Include="app\services\caseService.js" />
-    <Content Include="app\services\patientService.js" />
     <Content Include="app\services\patientsService.js" />
+    <Content Include="app\services\oldPatientsService.js" />
     <Content Include="app\services\signaturePadService.js" />
     <Content Include="app\views\createPatient.html" />
     <Content Include="app\views\dashboard.html" />
@@ -172,6 +172,7 @@
     <Content Include="bower_components\signature_pad\example\js\signature_pad.js" />
     <Content Include="bower_components\signature_pad\signature_pad.js" />
     <Content Include="bower_components\signature_pad\signature_pad.min.js" />
+    <Content Include="content\css\signature-pad.css" />
     <Content Include="proto\admincase.html" />
     <Content Include="proto\managecase.css" />
     <Content Include="proto\managecase.html" />

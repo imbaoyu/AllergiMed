@@ -7,7 +7,7 @@
             <td title="'DOB'" sortable="'intakeDate'">{{row.dob}}</td>
             <td title="'Address'" filter="{address: 'text'}" sortable="'address'">{{row.address}}</td>
             <td>
-                <input type="submit" value="Edit" class="btn" ng-click="edit(row.id)"/>
+                <input type="submit" value="Edit" class="btn" ng-click="edit(row)"/>
                 <input type="submit" value="Delete" class="btn" ng-click="delete(row.id)" />
             </td>
         </tr>

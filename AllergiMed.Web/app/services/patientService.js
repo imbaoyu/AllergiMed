@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.factory('patientsService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
+app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
 
     var patientServiceProduct = {};
 

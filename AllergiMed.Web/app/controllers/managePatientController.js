@@ -1,19 +1,17 @@
 ﻿'use strict';
-app.controller('managePatientController', ['$location', '$scope', 'NgTableParams', 'patientsService', function (
-    $location, $scope, NgTableParams, patientsService) {
+app.controller('managePatientController', ['$location', '$scope', 'NgTableParams', 'patientService', function (
+    $location, $scope, NgTableParams, patientService) {
 
-    var patientList = patientsService.getAllPatients();
+    var patientList = patientService.getAllPatients();
 
     $scope.edit = function(patient) {
-        patientsService.setSelectedPatient(patient);
+        patientService.setSelectedPatient(patient);
         $location.path('/CreatePatient');
     }
 
     $scope.delete = function (id) {
-        patientsService.deletePatientById(id);
-        patientList = patientsService.getAllPatients();
-        this.tableParams.reload();
-        //$location.path('/Dashboard');
+        patientService.deletePatientById(id);
+        patientList = patientService.getAllPatients();
     }
 
     this.tableParams = new NgTableParams(

@@ -71,14 +71,14 @@
     <Content Include="app\views\directives\amSignaturePadTemplate.html" />
     <Content Include="app\services\antigenService.js" />
     <Content Include="app\services\caseService.js" />
-    <Content Include="app\services\patientsService.js" />
+    <Content Include="app\services\patientService.js" />
     <Content Include="app\services\oldPatientsService.js" />
     <Content Include="app\services\signaturePadService.js" />
     <Content Include="app\views\createPatient.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\fakelogin.html" />
-    <Content Include="app\views\managecase.html" />
-    <Content Include="app\views\managepatient.html" />
+    <Content Include="app\views\manageCase.html" />
+    <Content Include="app\views\managePatient.html" />
     <Content Include="app\views\patients.html" />
     <Content Include="app\views\proto.html" />
     <Content Include="app\views\terms.html" />

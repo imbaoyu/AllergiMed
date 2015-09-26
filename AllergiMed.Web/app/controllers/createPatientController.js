@@ -1,10 +1,10 @@
 ﻿'use strict';
-app.controller('createPatientController', ['$scope', '$location', 'patientsService',
-    function ($scope, $location, patientsService) {
+app.controller('createPatientController', ['$scope', '$location', 'patientService',
+    function ($scope, $location, patientService) {
     
         //set the patient currently being edited
         //if creating a new patient set it to null
-        $scope.patient = patientsService.getSelectedPatient();
+        $scope.patient = patientService.getSelectedPatient();
         if ($scope.patient == null) {
             $scope.action = 'Create';
         }
@@ -14,7 +14,7 @@ app.controller('createPatientController', ['$scope', '$location', 'patientsServi
 
         $scope.clear = function () {
             $scope.patient = {};
-            patientsService.setSelectedPatient(null);
+            patientService.setSelectedPatient(null);
         };
 
         $scope.cancel = function() {
@@ -22,7 +22,7 @@ app.controller('createPatientController', ['$scope', '$location', 'patientsServi
         };
 
         $scope.save = function () {
-            patientsService.addPatient($scope.patient);
+            patientService.addPatient($scope.patient);
             $location.path('/ManagePatient');
         };
 
@@ -34,7 +34,7 @@ app.controller('createPatientController', ['$scope', '$location', 'patientsServi
             $rootScope.pendingCase.intakeDate = patient.intakeDate;
 
             //add a patient implicitly
-            var pat = patientsService.addPatient(patient);
+            var pat = patientService.addPatient(patient);
             $rootScope.pendingCase.patientId = pat.id;
         }
 }]);

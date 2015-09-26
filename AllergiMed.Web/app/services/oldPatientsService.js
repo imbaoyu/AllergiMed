@@ -1,9 +1,9 @@
 ﻿'use strict';
-app.factory('patientsService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
+app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
 
     var serviceBase = ngAuthSettings.apiServiceBaseUri;
 
-    var patientsServiceFactory = {};
+    var patientServiceFactory = {};
 
     var _getPatients = function () {
 
@@ -12,8 +12,8 @@ app.factory('patientsService', ['$http', 'ngAuthSettings', function ($http, ngAu
         });
     };
 
-    patientsServiceFactory.getPatients = _getPatients;
+    patientServiceFactory.getPatients = _getPatients;
 
-    return patientsServiceFactory;
+    return patientServiceFactory;
 
 }]);

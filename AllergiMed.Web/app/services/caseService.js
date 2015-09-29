@@ -1,7 +1,7 @@
 ﻿'use strict';
 app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
 
-    var caseServiceFactory = {};
+    var caseServiceProduct = {};
 
     var collection = [
         {
@@ -48,12 +48,21 @@ app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSe
         }     
     ];
 
+    caseServiceProduct.selectedCase = null;
 
-    var getCases = function () {
+    caseServiceProduct.setSelectedCase = function (caseItem) {
+        caseServiceProduct.selectedCase = caseItem;
+    };
+
+    caseServiceProduct.getSelectedCase = function () {
+        return caseServiceProduct.selectedCase;
+    };
+
+    caseServiceProduct.getAllCases = function () {
         return collection;
     };
 
-    var getCase = function (id) {
+    caseServiceProduct.getCaseById = function (id) {
         for (var i = 0; i < collection.length; i++) {
             if (collection[i].id === id) {
                 return collection[i];
@@ -62,7 +71,15 @@ app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSe
         return null;
     };
 
-    var addCase = function (caseItem) {
+    caseServiceProduct.deleteCaseById = function (id) {
+        for (var i = 0; i < collection.length; i++) {
+            if (collection[i].id === id) {
+                collection.splice(i, 1);
+            }
+        }
+    };
+
+    caseServiceProduct.addCase = function (caseItem) {
         for (var i = 0; i < collection.length; i++) {
             if (collection[i].id === caseItem.id) {
                 //replace the existing one
@@ -76,10 +93,6 @@ app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSe
         return caseItem;
     };
 
-    caseServiceFactory.getCases = getCases;
-    caseServiceFactory.getCase = getCase;
-    caseServiceFactory.addCase = addCase;
-
-    return caseServiceFactory;
+    return caseServiceProduct;
 
 }]);

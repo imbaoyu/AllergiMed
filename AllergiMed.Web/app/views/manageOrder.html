@@ -1,0 +1,17 @@
+﻿<div ng-controller="manageOrderController as order">
+    <h2 class="page-header">Orders List</h2>
+    <table ng-table="order.tableParams" show-filter="true" class="table table-bordered table-striped">
+        <tr ng-repeat="row in $data track by row.id">
+            <td title="'Id'" sortable="'id'">{{row.id}}</td>
+            <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patient.patientName'">{{row.patient.patientName}}</td>
+            <td title="'Panels'" sortable="'panels'">{{row.panels}}</td>
+            <td title="'Dosage'" sortable="'dosage'">{{row.dosage}}</td>
+            <td title="'Starting Date'" sortable="'startingDate'">{{row.startingDate}}</td>
+            <td>
+                <input ng-show="!row.approved" type="submit" value="Approve" class="btn" ng-click="approve(row.id)" />
+                <p ng-show="row.approved">Approved</p>
+            </td>
+        </tr>
+    </table>
+</div>
+

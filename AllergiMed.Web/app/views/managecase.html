@@ -3,9 +3,9 @@
     <table ng-table="case.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data track by row.id">
             <td title="'Id'" sortable="'id'">{{row.id}}</td>
-            <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patientName'">{{row.patient.patientName}}</td>
+            <td title="'Patient Name'" filter="{patientName: 'text'}" sortable="'patient.patientName'">{{row.patient.patientName}}</td>
             <td title="'Intake Date'" sortable="'intakeDate'">{{row.intakeDate}}</td>
-            <td title="'Case Status'" filter="{poweredBy: 'text'}" sortable="'status'">{{row.status}}</td>
+            <td title="'Case Status'" filter="{status: 'text'}" sortable="'status'">{{row.status}}</td>
             <td><input type="submit" value="Manage" class="btn" ng-click="manage(row.id)"/> <input type="submit" value="View" class="btn" /> </td>
         </tr>
     </table>

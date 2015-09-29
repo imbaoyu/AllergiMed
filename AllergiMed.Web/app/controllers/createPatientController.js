@@ -1,7 +1,6 @@
 ﻿'use strict';
-app.controller('createPatientController', ['$scope', '$location', 'patientService',
-    function ($scope, $location, patientService) {
-    
+app.controller('createPatientController', ['$scope', '$location', 'patientService', 'caseService',
+    function ($scope, $location, patientService, caseService) {
         //set the patient currently being edited
         //if creating a new patient set it to null
         $scope.patient = patientService.getSelectedPatient();
@@ -29,12 +28,14 @@ app.controller('createPatientController', ['$scope', '$location', 'patientServic
         //only used in create case wizard
         $scope.next = function (patient) {
             if (!$scope.patient) return;
+            
+            var pendingCase = {};
+            patient = patientService.addPatient(patient);
 
-            $rootScope.pendingCase = {};
-            $rootScope.pendingCase.intakeDate = patient.intakeDate;
+            pendingCase.intakeDate = patient.intakeDate;
+            //add a patient implicitly        
+            pendingCase.patientId = patient.id;
 
-            //add a patient implicitly
-            var pat = patientService.addPatient(patient);
-            $rootScope.pendingCase.patientId = pat.id;
+            caseService.setSelectedCase(pendingCase);
         }
 }]);

@@ -26,6 +26,11 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/createPatient.html"
     });
 
+    $routeProvider.when("/Orders", {
+        controller: "manageOrderController",
+        templateUrl: "/app/views/manageOrder.html"
+    });
+
     $routeProvider.when("/login", {
         controller: "loginController",
         templateUrl: "/app/views/login.html"
@@ -75,10 +80,11 @@ app.run(['authService', '$rootScope', '$location', 'caseService', function (auth
     authService.fillAuthData();
     $rootScope.isLogin = false;
     $rootScope.finishedWizard = function () {
-        if ($rootScope.pendingCase !== null) {
-            $rootScope.pendingCase.status = 'pending';
-            caseService.addCase($rootScope.pendingCase);
-            $rootScope.pendingCase = null;
+        var caseItem = caseService.getSelectedCase();
+        if (caseItem !== null) {
+            caseItem.status = 'pending';
+            caseService.addCase(caseItem);
+            caseService.setSelectedCase(null);
         }
         $location.path('/Dashboard');
     }

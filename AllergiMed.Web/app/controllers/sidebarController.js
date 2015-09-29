@@ -7,13 +7,17 @@ app.controller('sidebarController', ['$scope', '$location', 'authService', funct
             route: '/#/Dashboard'
         },
         {
-            name: 'Manage Cases',
+            name: 'Cases',
             route: '/#/ManageCase'
         },
         {
-            name: 'Manage Patients',
+            name: 'Patients',
             route: '/#/ManagePatient'
-        }
+        },
+        {
+            name: 'Orders',
+            route: '/#/Orders'
+        },
     ];
 
     $scope.select = function (index) {

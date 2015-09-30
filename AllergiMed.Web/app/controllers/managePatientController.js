@@ -12,9 +12,10 @@ app.controller('managePatientController', ['$location', '$scope', '$filter', 'Ng
     $scope.delete = function (id) {
         patientService.deletePatientById(id);
         patientList = patientService.getAllPatients();
+        params.reload();
     };
 
-    this.tableParams = new NgTableParams(
+    var params = this.tableParams = new NgTableParams(
         {
             page: 1,
             count: 10,

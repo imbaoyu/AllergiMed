@@ -7,12 +7,12 @@ app.controller('sidebarController', ['$scope', '$location', 'authService', funct
             route: '/#/Dashboard'
         },
         {
-            name: 'Cases',
-            route: '/#/ManageCase'
-        },
-        {
             name: 'Patients',
             route: '/#/ManagePatient'
+        },
+        {
+            name: 'Cases',
+            route: '/#/ManageCase'
         },
         {
             name: 'Orders',

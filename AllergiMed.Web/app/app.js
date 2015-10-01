@@ -18,7 +18,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/ManagePatient", {
         controller: "managePatientController",
-        templateUrl: "/app/views/managePatient.html"
+        templateUrl: "/app/views/patientList.html"
     });
 
     $routeProvider.when("/CreatePatient", {

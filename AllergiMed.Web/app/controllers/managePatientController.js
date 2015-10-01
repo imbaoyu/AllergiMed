@@ -9,6 +9,12 @@ app.controller('managePatientController', ['$location', '$scope', '$filter', 'Ng
         $location.path('/CreatePatient');
     };
 
+    $scope.view = function (patient) {
+        patientService.setSelectedPatient(patient);
+        $location.path('/CreatePatient');
+    };
+
+
     $scope.delete = function (id) {
         patientService.deletePatientById(id);
         patientList = patientService.getAllPatients();

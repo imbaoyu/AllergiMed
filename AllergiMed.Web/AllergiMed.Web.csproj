@@ -78,7 +78,8 @@
     <Content Include="app\views\fakelogin.html" />
     <Content Include="app\views\manageCase.html" />
     <Content Include="app\views\manageOrder.html" />
-    <Content Include="app\views\managePatient.html" />
+    <Content Include="app\views\patientList.html" />
+    <Content Include="app\views\patientView.html" />
     <Content Include="app\views\terms.html" />
     <Content Include="app\views\wizard.html" />
     <Content Include="bower_components\angular-bootstrap\index.js" />

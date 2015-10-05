@@ -1,0 +1,31 @@
+﻿<div data-ng-controller="viewPatientController as controller">
+    <h3>Patient Details</h3>
+    <div>
+        <h4>Patient Profile</h4>
+        <p>Patient Name: {{patient.patientName}}<p>
+        <p>Date of Birth: {{patient.dob}}</p>
+        <p>Phone: {{patient.phone}}</p>
+        <p>Street Address: {{patient.address}}</p>
+        <p>City: {{patient.city}}</p>
+        <p>State: {{patient.city}}</p>
+        <p>Zip: {{patient.state}}</p>
+        <input type="button" value="Edit" ng-click="edit()" class="btn btn-primary btn-lg" />
+    </div>
+    <hr>
+    <div>
+        <h4>Patient Cases</h4>
+        <table ng-table="controller.tableParams" show-filter="true" class="table table-bordered table-striped">
+            <tr ng-repeat="row in $data track by row.id">
+                <td title="'Id'" sortable="'id'">{{row.id}}</td>
+                <td title="'Intake Date'" sortable="'intakeDate'">{{row.intakeDate}}</td>
+                <td title="'Case Status'" filter="{status: 'text'}" sortable="'status'">{{row.status}}</td>
+                <td><input type="submit" value="Manage" class="btn" ng-click="manage(row.id)" /> <input type="submit" value="View" class="btn" /> </td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <h4>Therapy Plan</h4>
+        <p> this is the placeholder of therapy plan for {{patient.patientName}} </p>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('refreshController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+app.controller('refreshController', ['$scope', '$state', 'authService', function ($scope, $state, authService) {
 
     $scope.authentication = authService.authentication;
     $scope.tokenRefreshed = false;
@@ -12,7 +12,7 @@ app.controller('refreshController', ['$scope', '$location', 'authService', funct
             $scope.tokenResponse = response;
         },
          function (err) {
-             $location.path('/login');
+             $state.go('login');
          });
     };
 

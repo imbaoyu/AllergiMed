@@ -40,12 +40,12 @@
             <div class="col-sm-3 col-md-2 sidebar" data-ng-controller="sidebarController">
                 <ul class="nav nav-sidebar">
                     <li ng-repeat="item in menuItems" ng-click="select($index)" ng-class="{active: $index == selected}">
-                        <a ng-href="{{item.route}}">{{item.name}}</a>
+                        <a ui-sref="{{item.state}}">{{item.name}}</a>
                     </li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div data-ng-view="">
+                <div data-ui-view="">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>

@@ -1,69 +1,66 @@
-﻿var app = angular.module('AllergiMedApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar',
-    'mgo-angular-wizard', 'ui.bootstrap', 'ngTable']);
+﻿var app = angular.module('AllergiMedApp', ['ui.router', 'ui.bootstrap', 'LocalStorageModule', 'angular-loading-bar',
+    'mgo-angular-wizard', 'ngTable']);
 
-app.config(function ($routeProvider) {
-    $routeProvider.when("/Dashboard", {
-        controller: "dashboardController",
-        templateUrl: "/app/views/dashboard.html"
+app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+
+    $stateProvider.state('dashboard', {
+        url: '/Dashboard',
+        templateUrl: '/app/views/dashboard.html',
+        controller: 'dashboardController',
+    })
+    .state('wizard', {
+        url: '/Wizard',
+        templateUrl: '/app/views/wizard.html',
+    })
+    .state('manageCase', {
+        url: '/ManageCase',
+        templateUrl: '/app/views/manageCase.html',
+        controller: 'manageCaseController'
+    })
+    .state('managePatient', {
+        url: '/ManagePatient',
+        templateUrl: '/app/views/patientList.html',
+        controller: 'managePatientController'
+    })
+    .state('createPatient', {
+        url: '/CreatePatient',
+        templateUrl: '/app/views/createPatient.html',
+        controller: 'createPatientController'
+    })
+    .state('orders', {
+        url: '/Orders',
+        templateUrl: '/app/views/manageOrder.html',
+        controller: 'manageOrderController'
+    })
+    .state('login', {
+        url: '/Login',
+        templateUrl: '/app/views/login.html',
+        controller: 'loginController'
+    })
+    .state('signup', {
+        url: '/Signup',
+        templateUrl: '/app/views/signup.html',
+        controller: 'signupController'
+    })
+    .state('refresh', {
+        url: '/refresh',
+        templateUrl: '/app/views/refresh.html',
+        controller: 'refreshController'
+    })
+    .state('tokens', {
+        url: '/refresh',
+        templateUrl: '/app/views/tokens.html',
+        controller: 'tokensManagerController'
+    })
+    .state('associate', {
+        url: '/associate',
+        templateUrl: '/app/views/associate.html',
+        controller: 'associateController'
     });
 
-    $routeProvider.when("/Wizard", {
-        templateUrl: "/app/views/wizard.html"
-    });
+    $urlRouterProvider.otherwise('/Dashboard');
 
-    $routeProvider.when("/ManageCase", {
-        controller: "manageCaseController",
-        templateUrl: "/app/views/manageCase.html"
-    });
-
-    $routeProvider.when("/ManagePatient", {
-        controller: "managePatientController",
-        templateUrl: "/app/views/patientList.html"
-    });
-
-    $routeProvider.when("/CreatePatient", {
-        controller: "createPatientController",
-        templateUrl: "/app/views/createPatient.html"
-    });
-
-    $routeProvider.when("/Orders", {
-        controller: "manageOrderController",
-        templateUrl: "/app/views/manageOrder.html"
-    });
-
-    $routeProvider.when("/login", {
-        controller: "loginController",
-        templateUrl: "/app/views/login.html"
-    });
-
-    $routeProvider.when("/signup", {
-        controller: "signupController",
-        templateUrl: "/app/views/signup.html"
-    });
-
-    $routeProvider.when("/patients", {
-        controller: "patientsController",
-        templateUrl: "/app/views/patients.html"
-    });
-
-    $routeProvider.when("/refresh", {
-        controller: "refreshController",
-        templateUrl: "/app/views/refresh.html"
-    });
-
-    $routeProvider.when("/tokens", {
-        controller: "tokensManagerController",
-        templateUrl: "/app/views/tokens.html"
-    });
-
-    $routeProvider.when("/associate", {
-        controller: "associateController",
-        templateUrl: "/app/views/associate.html"
-    });
-
-    $routeProvider.otherwise({ redirectTo: "/Dashboard" });
-
-});
+}]);
 
 //var serviceBase = 'http://localhost:26264/';
 var serviceBase = 'http://allergimedapi.azurewebsites.net/';
@@ -72,12 +69,12 @@ app.constant('ngAuthSettings', {
     clientId: 'ngAuthApp'
 });
 
-app.config(function ($httpProvider) {
-    $httpProvider.interceptors.push('authInterceptorService');
-});
+//app.config(function ($httpProvider) {
+//    $httpProvider.interceptors.push('authInterceptorService');
+//});
 
-app.run(['authService', '$rootScope', '$location', 'caseService', function (authService, $rootScope, $location, caseService) {
-    authService.fillAuthData();
+app.run(['authService', '$rootScope', '$state', 'caseService', function (authService, $rootScope, $state, caseService) {
+    //authService.fillAuthData();
     $rootScope.isLogin = false;
     $rootScope.finishedWizard = function () {
         var caseItem = caseService.getSelectedCase();
@@ -86,6 +83,6 @@ app.run(['authService', '$rootScope', '$location', 'caseService', function (auth
             caseService.addCase(caseItem);
             caseService.setSelectedCase(null);
         }
-        $location.path('/Dashboard');
+        $state.go('dashboard');
     }
 }]);

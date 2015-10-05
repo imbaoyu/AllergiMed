@@ -1,6 +1,6 @@
 ﻿'use strict';
-app.controller('manageCaseController', ['$scope', '$filter', '$location', 'NgTableParams', 'caseService', 'patientService',
-    function ($scope, $filter, $location, NgTableParams, caseService, patientService) {
+app.controller('manageCaseController', ['$scope', '$filter', '$state', 'NgTableParams', 'caseService', 'patientService',
+    function ($scope, $filter, $state, NgTableParams, caseService, patientService) {
     
         var caseList = caseService.getAllCases();
 
@@ -13,7 +13,7 @@ app.controller('manageCaseController', ['$scope', '$filter', '$location', 'NgTab
             var patient = patientService.getPatientById(caseItem.patientId);
             caseService.setSelectedCase(caseItem);
             patientService.setSelectedPatient(patient);
-            $location.path('/Wizard');
+            $state.go('wizard');
         };
 
         this.tableParams = new NgTableParams(

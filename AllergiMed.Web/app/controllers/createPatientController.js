@@ -1,6 +1,6 @@
 ﻿'use strict';
-app.controller('createPatientController', ['$scope', '$location', 'patientService', 'caseService',
-    function ($scope, $location, patientService, caseService) {
+app.controller('createPatientController', ['$scope', '$state', 'patientService', 'caseService',
+    function ($scope, $state, patientService, caseService) {
         //set the patient currently being edited
         //if creating a new patient set it to null
         $scope.patient = patientService.getSelectedPatient();
@@ -17,12 +17,12 @@ app.controller('createPatientController', ['$scope', '$location', 'patientServic
         };
 
         $scope.cancel = function() {
-            $location.path('/Dashboard');
+            $state.go('dashboard');
         };
 
         $scope.save = function () {
             patientService.addPatient($scope.patient);
-            $location.path('/ManagePatient');
+            $state.go('managePatient');
         };
 
         //only used in create case wizard

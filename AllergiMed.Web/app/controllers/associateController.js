@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('associateController', ['$scope', '$location', '$timeout', 'authService', function ($scope, $location, $timeout, authService) {
+app.controller('associateController', ['$scope', '$state', '$timeout', 'authService', function ($scope, $state, $timeout, authService) {
 
     $scope.savedSuccessfully = false;
     $scope.message = "";
@@ -31,7 +31,7 @@ app.controller('associateController', ['$scope', '$location', '$timeout', 'authS
     var startTimer = function () {
         var timer = $timeout(function () {
             $timeout.cancel(timer);
-            $location.path('/patients');
+            $state.go('dashboard');
         }, 2000);
     }
 

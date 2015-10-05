@@ -1,28 +1,28 @@
 ﻿'use strict';
-app.controller('dashboardController', ['$scope', '$location', 'authService', 'patientService', 'caseService', 'orderService',
-    function ($scope, $location, authService, patientService, caseService, orderService) {
+app.controller('dashboardController', ['$scope', '$state', 'authService', 'patientService', 'caseService', 'orderService',
+    function ($scope, $state, authService, patientService, caseService, orderService) {
         $scope.patientsNumber = patientService.getAllPatients().length;
         $scope.pendingCase = caseService.getAllCases().length;
         $scope.pendingOrder = orderService.getAllOrders().length;
 
         $scope.managePatient = function() {
-            $location.path('/ManagePatient');
+            $state.go('managePatient');
         };
 
         $scope.createPatient = function () {
             patientService.setSelectedPatient(null);
-            $location.path('/CreatePatient');
+            $state.go('createPatient');
         };
 
         $scope.manageCase = function() {
-            $location.path('/ManageCase');
+            $state.go('manageCase');
         };
 
         $scope.createCase = function() {
-            $location.path('/Wizard');
+            $state.go('wizard');
         };
 
         $scope.manageOrder = function () {
-            $location.path('/Orders');
+            $state.go('orders');
         };
 }]);

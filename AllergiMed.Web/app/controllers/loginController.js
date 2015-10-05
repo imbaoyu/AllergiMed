@@ -11,7 +11,7 @@ app.controller('loginController', ['$scope', '$location', 'authService', 'ngAuth
 
     $scope.login = function () {
         authService.login($scope.loginData).then(function (response) {
-            $location.path('/patients');
+            $state.go('dashboard');
         },
         function (err) {
             $scope.message = err.error_description;
@@ -41,14 +41,14 @@ app.controller('loginController', ['$scope', '$location', 'authService', 'ngAuth
                     externalAccessToken: fragment.external_access_token
                 };
 
-                $location.path('/associate');
+                $state.go('associate');
 
             }
             else {
                 //Obtain access token and redirect to patients
                 var externalData = { provider: fragment.provider, externalAccessToken: fragment.external_access_token };
                 authService.obtainAccessToken(externalData).then(function (response) {
-                    $location.path('/patients');
+                    $state.go('dashboard');
                 },
              function (err) {
                  $scope.message = err.error_description;

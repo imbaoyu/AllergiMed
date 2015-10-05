@@ -4,18 +4,22 @@ app.controller('sidebarController', ['$scope', '$location', 'authService', funct
     $scope.menuItems = [
         {
             name: 'Dashboard',
+            state: 'dashboard',
             route: '/#/Dashboard'
         },
         {
             name: 'Patients',
+            state: 'managePatient',
             route: '/#/ManagePatient'
         },
         {
             name: 'Cases',
+            state: 'manageCase',
             route: '/#/ManageCase'
         },
         {
             name: 'Orders',
+            state: 'orders',
             route: '/#/Orders'
         },
     ];

@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.factory('authInterceptorService', ['$q', '$injector', '$location', 'localStorageService', function ($q, $injector, $location, localStorageService) {
+app.factory('authInterceptorService', ['$q', '$injector', '$state', 'localStorageService', function ($q, $injector, $state, localStorageService) {
 
     var authInterceptorServiceFactory = {};
 
@@ -22,12 +22,12 @@ app.factory('authInterceptorService', ['$q', '$injector', '$location', 'localSto
 
             if (authData) {
                 if (authData.useRefreshTokens) {
-                    $location.path('/refresh');
+                    $state.go('refresh');
                     return $q.reject(rejection);
                 }
             }
             authService.logOut();
-            $location.path('/login');
+            $state.go('login');
         }
         return $q.reject(rejection);
     }

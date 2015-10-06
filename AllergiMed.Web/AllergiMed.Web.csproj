@@ -59,7 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\controllers\createPatientController.js" />
+    <Content Include="app\controllers\updatePatientController.js" />
     <Content Include="app\controllers\dashboardController.js" />
     <Content Include="app\controllers\fakeLoginController.js" />
     <Content Include="app\controllers\manageCaseController.js" />
@@ -76,7 +76,7 @@
     <Content Include="app\services\antigenService.js" />
     <Content Include="app\services\caseService.js" />
     <Content Include="app\services\patientService.js" />
-    <Content Include="app\views\createPatient.html" />
+    <Content Include="app\views\updatePatient.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\fakelogin.html" />
     <Content Include="app\views\manageCase.html" />

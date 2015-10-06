@@ -1,14 +1,13 @@
 ﻿'use strict';
-app.controller('createPatientController', ['$scope', '$state', 'patientService', 'caseService',
-    function ($scope, $state, patientService, caseService) {
-        //set the patient currently being edited
-        //if creating a new patient set it to null
-        $scope.patient = patientService.getSelectedPatient();
-        if ($scope.patient == null) {
-            $scope.action = 'Create';
-        }
-        else {
+app.controller('updatePatientController', ['$scope', '$state', '$stateParams', 'patientService', 'caseService',
+    function ($scope, $state, $stateParams, patientService, caseService) {
+        var patientId = $stateParams.patientId;
+
+        if (!!patientId) {
+            $scope.patient = patientService.getPatientById(patientId);
             $scope.action = 'Edit';
+        } else {
+            $scope.action = 'Create';
         }
 
         $scope.clear = function () {
@@ -17,7 +16,7 @@ app.controller('createPatientController', ['$scope', '$state', 'patientService',
         };
 
         $scope.cancel = function() {
-            $state.go('dashboard');
+            $state.go('listPatient');
         };
 
         $scope.save = function () {

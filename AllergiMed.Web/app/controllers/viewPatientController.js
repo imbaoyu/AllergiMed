@@ -6,6 +6,13 @@ app.controller('viewPatientController', ['$scope', '$state', '$stateParams', '$f
 
         var caseList = caseService.getCasesByPatientId(patientId);
 
+        $scope.editPatient = function (patientId) {
+            $state.go('editPatient', { patientId: patientId });
+        }
+
+        $scope.editCase = function (caseId) {
+        }
+
         var params = this.tableParams = new NgTableParams(
         {
             page: 1,
@@ -18,8 +25,7 @@ app.controller('viewPatientController', ['$scope', '$state', '$stateParams', '$f
             total: caseList.length,
             filterDelay: 0,
             getData: function ($defer, params) {
-                var filteredData = params.filter() ? $filter('filter')(caseList, params.filter()) : caseList;
-                var orderedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
+                var orderedData = params.sorting() ? $filter('orderBy')(caseList, params.orderBy()) : caseList;
                 params.total(orderedData.length);
                 $defer.resolve(orderedData);
             }

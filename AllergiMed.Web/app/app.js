@@ -15,8 +15,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     })
     .state('createPatient', {
         url: '/createPatient',
-        templateUrl: '/app/views/createPatient.html',
-        controller: 'createPatientController'
+        templateUrl: '/app/views/updatePatient.html',
+        controller: 'updatePatientController'
+    })
+    .state('editPatient', {
+        url: '/editPatient/:patientId',
+        templateUrl: '/app/views/updatePatient.html',
+        controller: 'updatePatientController'
     })
     .state('viewPatient', {
         url: '/viewPatient/:patientId',

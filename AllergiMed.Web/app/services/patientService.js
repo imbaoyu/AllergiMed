@@ -132,7 +132,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
 
     patientServiceProduct.getPatientById = function (id) {
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === id) {
+            if (collection[i].id == id) {
                 return collection[i];
             }
         }
@@ -141,7 +141,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
 
     patientServiceProduct.deletePatientById = function (id) {
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === id) {
+            if (collection[i].id == id) {
                 collection.splice(i, 1);
             }
         }
@@ -153,7 +153,7 @@ app.factory('patientService', ['$http', 'ngAuthSettings', function ($http, ngAut
         }
 
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === patient.id) {
+            if (collection[i].id == patient.id) {
                 //update the existing one
                 collection[i] = patient;
                 return patient;

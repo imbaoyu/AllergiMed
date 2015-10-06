@@ -19,7 +19,7 @@
                 <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </button>
-                <a class="navbar-brand" href="#/Dashboard">Home</a>
+                <a class="navbar-brand" href="#/dashboard">Home</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
@@ -45,7 +45,7 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div data-ui-view="">
+                <div data-ui-view>
                 </div>
             </div>
         </div>
@@ -73,6 +73,9 @@
     <script src="app/services/antigenService.js"></script>
     <script src="app/services/orderService.js"></script>
     <!-- Load controllers -->
+    <script src="app/controllers/listPatientController.js"></script>
+    <script src="app/controllers/createPatientController.js"></script>
+    <script src="app/controllers/viewPatientController.js"></script>
     <script src="app/controllers/indexController.js"></script>
     <script src="app/controllers/sidebarController.js"></script>
     <script src="app/controllers/fakeLoginController.js"></script>
@@ -83,8 +86,6 @@
     <script src="app/controllers/wizardTestResultController.js"></script>
     <script src="app/controllers/wizardTestReportController.js"></script>
     <script src="app/controllers/manageCaseController.js"></script>
-    <script src="app/controllers/createPatientController.js"></script>
-    <script src="app/controllers/managePatientController.js"></script>
     <script src="app/controllers/manageOrderController.js"></script>
     
 </body>

@@ -22,7 +22,7 @@ app.controller('createPatientController', ['$scope', '$state', 'patientService',
 
         $scope.save = function () {
             patientService.addPatient($scope.patient);
-            $state.go('managePatient');
+            $state.go('listPatient');
         };
 
         //only used in create case wizard

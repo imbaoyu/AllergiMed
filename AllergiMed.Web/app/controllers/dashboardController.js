@@ -6,7 +6,7 @@ app.controller('dashboardController', ['$scope', '$state', 'authService', 'patie
         $scope.pendingOrder = orderService.getAllOrders().length;
 
         $scope.managePatient = function() {
-            $state.go('managePatient');
+            $state.go('listPatient');
         };
 
         $scope.createPatient = function () {

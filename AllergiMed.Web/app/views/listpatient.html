@@ -1,6 +1,6 @@
-﻿<div ng-controller="managePatientController as patient">
+﻿<div>
     <h2 class="page-header">Patients List</h2>
-    <table ng-table="patient.tableParams" show-filter="true" class="table table-bordered table-striped">
+    <table ng-table="controller.tableParams" show-filter="true" class="table table-bordered table-striped">
         <tr ng-repeat="row in $data track by row.id">
             <td title="'Id'" sortable="'id'">{{row.id}}</td>
             <td title="'Name'" filter="{patientName: 'text'}" sortable="'patientName'">{{row.patientName}}</td>

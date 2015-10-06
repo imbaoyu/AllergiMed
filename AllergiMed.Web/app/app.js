@@ -4,41 +4,46 @@
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('dashboard', {
-        url: '/Dashboard',
+        url: '/dashboard',
         templateUrl: '/app/views/dashboard.html',
         controller: 'dashboardController',
     })
-    .state('wizard', {
-        url: '/Wizard',
-        templateUrl: '/app/views/wizard.html',
-    })
-    .state('manageCase', {
-        url: '/ManageCase',
-        templateUrl: '/app/views/manageCase.html',
-        controller: 'manageCaseController'
-    })
-    .state('managePatient', {
-        url: '/ManagePatient',
-        templateUrl: '/app/views/patientList.html',
-        controller: 'managePatientController'
+    .state('listPatient', {
+        url: '/listPatient',
+        templateUrl: '/app/views/listPatient.html',
+        controller: 'listPatientController as controller'
     })
     .state('createPatient', {
-        url: '/CreatePatient',
+        url: '/createPatient',
         templateUrl: '/app/views/createPatient.html',
         controller: 'createPatientController'
     })
+    .state('viewPatient', {
+        url: '/viewPatient/:patientId',
+        templateUrl: '/app/views/viewPatient.html',
+        controller: 'viewPatientController as controller'
+    })
+    .state('wizard', {
+        url: '/wizard',
+        templateUrl: '/app/views/wizard.html',
+    })
+    .state('manageCase', {
+        url: '/manageCase',
+        templateUrl: '/app/views/manageCase.html',
+        controller: 'manageCaseController'
+    })
     .state('orders', {
-        url: '/Orders',
+        url: '/orders',
         templateUrl: '/app/views/manageOrder.html',
         controller: 'manageOrderController'
     })
     .state('login', {
-        url: '/Login',
+        url: '/login',
         templateUrl: '/app/views/login.html',
         controller: 'loginController'
     })
     .state('signup', {
-        url: '/Signup',
+        url: '/signup',
         templateUrl: '/app/views/signup.html',
         controller: 'signupController'
     })
@@ -58,7 +63,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         controller: 'associateController'
     });
 
-    $urlRouterProvider.otherwise('/Dashboard');
+    $urlRouterProvider.otherwise('/dashboard');
 
 }]);
 

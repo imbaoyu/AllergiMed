@@ -64,16 +64,26 @@ app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSe
 
     caseServiceProduct.getCaseById = function (id) {
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === id) {
+            if (collection[i].id == id) {
                 return collection[i];
             }
         }
         return null;
     };
 
+    caseServiceProduct.getCasesByPatientId = function (patientId) {
+        var patientCases = [];
+        for (var i = 0; i < collection.length; i++) {
+            if (collection[i].patientId == patientId) {
+                patientCases.push(collection[i]);
+            }
+        }
+        return patientCases;
+    };
+
     caseServiceProduct.deleteCaseById = function (id) {
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === id) {
+            if (collection[i].id == id) {
                 collection.splice(i, 1);
             }
         }
@@ -81,7 +91,7 @@ app.factory('caseService', ['$http', 'ngAuthSettings', function ($http, ngAuthSe
 
     caseServiceProduct.addCase = function (caseItem) {
         for (var i = 0; i < collection.length; i++) {
-            if (collection[i].id === caseItem.id) {
+            if (collection[i].id == caseItem.id) {
                 //replace the existing one
                 collection[i] = caseItem;
                 return caseItem;

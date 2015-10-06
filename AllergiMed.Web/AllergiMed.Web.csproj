@@ -63,9 +63,10 @@
     <Content Include="app\controllers\dashboardController.js" />
     <Content Include="app\controllers\fakeLoginController.js" />
     <Content Include="app\controllers\manageCaseController.js" />
-    <Content Include="app\controllers\managePatientController.js" />
+    <Content Include="app\controllers\listPatientController.js" />
     <Content Include="app\controllers\manageOrderController.js" />
     <Content Include="app\controllers\sidebarController.js" />
+    <Content Include="app\controllers\viewPatientController.js" />
     <Content Include="app\controllers\wizardAntigenController.js" />
     <Content Include="app\controllers\wizardTestReportController.js" />
     <Content Include="app\controllers\wizardTestResultController.js" />
@@ -80,8 +81,8 @@
     <Content Include="app\views\fakelogin.html" />
     <Content Include="app\views\manageCase.html" />
     <Content Include="app\views\manageOrder.html" />
-    <Content Include="app\views\patientList.html" />
-    <Content Include="app\views\patientView.html" />
+    <Content Include="app\views\listPatient.html" />
+    <Content Include="app\views\viewPatient.html" />
     <Content Include="app\views\terms.html" />
     <Content Include="app\views\wizard.html" />
     <Content Include="bower_components\angular-bootstrap\index.js" />
@@ -203,11 +204,6 @@
     <Content Include="bower_components\angular-local-storage\LICENSE" />
     <Content Include="bower_components\angular-local-storage\package.json" />
     <Content Include="bower_components\angular-local-storage\README.md" />
-    <Content Include="bower_components\angular-route\.bower.json" />
-    <Content Include="bower_components\angular-route\angular-route.min.js.map" />
-    <Content Include="bower_components\angular-route\bower.json" />
-    <Content Include="bower_components\angular-route\package.json" />
-    <Content Include="bower_components\angular-route\README.md" />
     <Content Include="bower_components\angular\.bower.json" />
     <Content Include="bower_components\angular\angular.min.js.gzip" />
     <Content Include="bower_components\angular\angular.min.js.map" />
@@ -392,9 +388,6 @@
     <Content Include="bower_components\angular-local-storage\demo\demo.html" />
     <Content Include="bower_components\angular-local-storage\dist\angular-local-storage.js" />
     <Content Include="bower_components\angular-local-storage\dist\angular-local-storage.min.js" />
-    <Content Include="bower_components\angular-route\angular-route.js" />
-    <Content Include="bower_components\angular-route\angular-route.min.js" />
-    <Content Include="bower_components\angular-route\index.js" />
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />

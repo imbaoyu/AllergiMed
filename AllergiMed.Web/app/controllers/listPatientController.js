@@ -22,19 +22,18 @@ app.controller('listPatientController', ['$state', '$scope', '$filter', 'NgTable
     var params = this.tableParams = new NgTableParams(
         {
             page: 1,
-            count: 10,
-            sorting: {
-                name: 'asc'
-            }
+            count: 10
         },
         {
             total: patientList.length,
+            counts: [10,25,50],
             filterDelay: 0,
             getData: function ($defer, params) {
                 var filteredData = params.filter() ? $filter('filter')(patientList, params.filter()) : patientList;
                 var orderedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
+                var slicedData = orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
                 params.total(orderedData.length);
-                $defer.resolve(orderedData);
+                $defer.resolve(slicedData);
             }
         });
     }

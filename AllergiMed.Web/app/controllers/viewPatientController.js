@@ -24,10 +24,12 @@ app.controller('viewPatientController', ['$scope', '$state', '$stateParams', '$f
         {
             total: caseList.length,
             filterDelay: 0,
+            counts: [10, 25, 50],
             getData: function ($defer, params) {
                 var orderedData = params.sorting() ? $filter('orderBy')(caseList, params.orderBy()) : caseList;
+                var slicedData = orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
                 params.total(orderedData.length);
-                $defer.resolve(orderedData);
+                $defer.resolve(slicedData);
             }
         });
     }]);

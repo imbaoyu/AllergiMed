@@ -10,7 +10,7 @@ app.controller('listPatientController', ['$state', '$scope', '$filter', 'NgTable
     };
 
     $scope.view = function (patient) {
-        $state.go('viewPatient', { patientId: patient.id});
+        $state.go('viewPatient.profile', { patientId: patient.id});
     };
 
     $scope.delete = function (id) {

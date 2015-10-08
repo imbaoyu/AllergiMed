@@ -1,14 +1,17 @@
 ﻿'use strict';
-app.controller('fakeLoginController', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
-    $rootScope.isLogin = false;
+app.controller('fakeLoginController', ['$scope', '$rootScope', '$location', '$state',
 
-    $scope.login = function () {
-        if ($scope.username === 'doctor' && $scope.password === 'doctor') {
-            $scope.error = null;
-            $rootScope.isLogin = true;
-        } else {
-            $scope.error = 'Invalid Username or Password';
-            $rootScope.isLogin = false;
+    function ($scope, $rootScope, $location, $state) {
+        $rootScope.isLogin = false;
+
+        $scope.login = function () {
+            if ($scope.username === 'doctor' && $scope.password === 'doctor') {
+                $scope.error = null;
+                $rootScope.isLogin = true;
+                $state.go('dashboard');
+            } else {
+                $scope.error = 'Invalid Username or Password';
+                $rootScope.isLogin = false;
+            }
         }
-    }
-}]);
+    }]);

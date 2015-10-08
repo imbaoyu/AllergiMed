@@ -28,6 +28,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         templateUrl: '/app/views/viewPatient.html',
         controller: 'viewPatientController as controller'
     })
+    .state('viewPatient.profile', {
+        templateUrl: '/app/views/patientProfile.html',
+    })
     .state('wizard', {
         url: '/wizard',
         templateUrl: '/app/views/wizard.html',

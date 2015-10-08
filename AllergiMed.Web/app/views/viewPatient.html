@@ -2,15 +2,9 @@
     <h3>Patient Details</h3>
     <div>
         <h4>Patient Profile</h4>
-        <p>Patient Name: {{patient.patientName}}<p>
-        <p>Date of Birth: {{patient.dob}}</p>
-        <p>Phone: {{patient.phone}}</p>
-        <p>Street Address: {{patient.address}}</p>
-        <p>City: {{patient.city}}</p>
-        <p>State: {{patient.state}}</p>
-        <p>Zip: {{patient.zip}}</p>
-        <input type="button" value="Edit" ng-click="editPatient(patient.id)" class="btn btn-primary btn-lg" />
+        <div data-ui-view></div>
     </div>
+    <input type="button" value="Edit" ng-click="editPatient(patient.id)" class="btn btn-primary btn-lg" />
     <hr>
     <div>
         <h4>Patient Cases</h4>

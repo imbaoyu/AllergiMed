@@ -76,6 +76,7 @@
     <Content Include="app\services\antigenService.js" />
     <Content Include="app\services\caseService.js" />
     <Content Include="app\services\patientService.js" />
+    <Content Include="app\views\patientProfile.html" />
     <Content Include="app\views\updatePatient.html" />
     <Content Include="app\views\dashboard.html" />
     <Content Include="app\views\fakelogin.html" />
